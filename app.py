@@ -16,8 +16,8 @@ app.config["MONGO_URI"] = os.getenv("uri")
 mongo = PyMongo(app)
 
 @app.route('/')
-@app.route('/get_games')
-def get_games():
+@app.route('/view_games')
+def view_games():
     return render_template("games.html", games = mongo.db.games.find())
     
 
