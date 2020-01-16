@@ -19,6 +19,10 @@ mongo = PyMongo(app)
 @app.route('/view_games')
 def view_games():
     return render_template("games.html", games = list(mongo.db.games.find()))
+
+@app.route('/add_review')
+def add_review():
+    return render_template("addreview.html", games = list(mongo.db.games.find()))
     
 
 if __name__ == '__main__':
