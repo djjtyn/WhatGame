@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
     {% for game in games %}
       {{game.game_name}}
       {{game.publisher}}
@@ -13,5 +9,4 @@
       {{game.multiplayer}}
       {{game.release_year}}
     {% endfor %}
-</body>
-</html>
+{% endblock %}
