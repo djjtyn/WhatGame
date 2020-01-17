@@ -22,7 +22,7 @@ def view_games():
 
 @app.route('/add_review')
 def add_review():
-    return render_template("addreview.html", games = list(mongo.db.games.find()))
+    return render_template("addreview.html", platforms = list(mongo.db.platforms.find()))
     
 
 if __name__ == '__main__':

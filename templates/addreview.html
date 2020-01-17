@@ -26,20 +26,27 @@
           <input id="genre" name="genre" type="text" class="validate">
           <label for="genre">Genre</label>
         </div><!--genre-->
-        <div class="input-field col s12">
-          <i class="fas fa-tv prefix"></i>
-          <input id="platform" name="platform" type="text" class="validate">
-          <label for="platform">Platform</label>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="fas fa-tv prefix"></i>
+              <select id="platform" name="platform">
+                  <option value="" disabled selected>Choose Platform</option>
+                  {% for platform in platforms %}
+                  <option value="{{platform.platform_name}}">{{platform.platform_name}}</option>
+                  {% endfor %}
+              </select>
+              <label>Choose Platform</label>
+          </div>
         </div><!--platform-->
         <div class="row">
         <div class="input-field col s12" id="multiplayer">
           <i class="fas fa-gamepad prefix"></i>
           <select id="multiplayer" name="multiplayer">
-                  <option value="" disabled selected>Local Multiplayer?</option>
-                  <option value="multiplayer_yes">Yes</option>
-                  <option value="multiplayer_no">No</option>
-          <label for="multiplayer">Local Multiplayer?</label>
+            <option value="" disabled selected>Select One</option>
+            <option value="multiplayer_yes">Yes</option>
+            <option value="multiplayer_no">No</option>
           </select>
+          <label>Local Multiplayer?</label>
           </div>
         </div><!--multiplayer-->
          <div class="input-field col s12">
