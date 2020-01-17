@@ -22,7 +22,14 @@ def view_games():
 
 @app.route('/add_review')
 def add_review():
-    return render_template("addreview.html", platforms = list(mongo.db.platforms.find()),ratings =list(mongo.db.rating.find()))
+    return render_template("addreview.html", platforms = list(mongo.db.platforms.find()),
+    ratings =list(mongo.db.rating.find()))
+
+@app.route('/review_added', methods=["POST"])
+def review_added():
+    games = mongo.db.games
+    games.insert_one(request.form.to_dict())
+    return redirect(url_for('view_games'))
     
 
 if __name__ == '__main__':
