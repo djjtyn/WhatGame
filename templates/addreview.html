@@ -31,10 +31,16 @@
           <input id="platform" name="platform" type="text" class="validate">
           <label for="platform">Platform</label>
         </div><!--platform-->
-        <div class="input-field col s12">
+        <div class="row">
+        <div class="input-field col s12" id="multiplayer">
           <i class="fas fa-gamepad prefix"></i>
-          <input id="multiplayer" name="multiplayer" type="text" class="validate">
-          <label for="multiplayer">Multiplayer?</label>
+          <select id="multiplayer" name="multiplayer">
+                  <option value="" disabled selected>Local Multiplayer?</option>
+                  <option value="multiplayer_yes">Yes</option>
+                  <option value="multiplayer_no">No</option>
+          <label for="multiplayer">Local Multiplayer?</label>
+          </select>
+          </div>
         </div><!--multiplayer-->
          <div class="input-field col s12">
           <i class="far fa-star prefix"></i>
