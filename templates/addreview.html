@@ -26,10 +26,10 @@
           <input id="genre" name="genre" type="text" class="validate">
           <label for="genre">Genre</label>
         </div><!--genre-->
-        <div class="row">
+        <div class="row" id="platform">
           <div class="input-field col s12">
             <i class="fas fa-tv prefix"></i>
-              <select id="platform" name="platform">
+              <select id="platform" name="platform" multiple>
                   <option value="" disabled selected>Choose Platform</option>
                   {% for platform in platforms %}
                   <option value="{{platform.platform_name}}">{{platform.platform_name}}</option>
