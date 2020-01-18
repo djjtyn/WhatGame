@@ -30,6 +30,12 @@ def review_added():
     games = mongo.db.games
     games.insert_one(request.form.to_dict())
     return redirect(url_for('view_games'))
+
+@app.route ('/edit_review/<game_id>')
+def edit_review(game_id):
+    game_review = mongo.db.games.find_one({"_id":ObjectId(game_id)})
+    all_platforms = mongo.db.platforms.find()
+    return render_template('editreview.html',review = game_review, platform = all_platforms )
     
 
 if __name__ == '__main__':
