@@ -34,9 +34,10 @@ def review_added():
 @app.route ('/edit_review/<game_id>')
 def edit_review(game_id):
     game_review = mongo.db.games.find_one({"_id":ObjectId(game_id)})
-    all_platforms = mongo.db.platforms.find()
-    return render_template('editreview.html',review = game_review, platform = all_platforms )
-    
+    all_platforms =mongo.db.platforms.find()
+    all_ratings = mongo.db.rating.find()
+    return render_template('editreview.html',game = game_review, 
+    platforms = all_platforms, ratings = all_ratings )
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',

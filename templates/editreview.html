@@ -39,7 +39,11 @@
           <select id="platform" name="platform" multiple>
             <option value="" disabled selected>Choose Platform</option>
             {% for platform in platforms %}
+            {% if platform.platform_name == game.platform_name %}
+            <option value="{{platform.platform_name}}"selected>{{platform.platform_name}}</option>
+            {% else %}
             <option value="{{platform.platform_name}}">{{platform.platform_name}}</option>
+            {%endif%}
                   {% endfor %}
           </select>
           <label>Choose Platform</label>
