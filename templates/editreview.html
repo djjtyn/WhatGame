@@ -39,13 +39,12 @@
           <select id="platform" name="platform" multiple>
             <option value="" disabled selected>Choose Platform</option>
             {% for platform in platforms %}
-            
-            {% if platform.platform_name == game.platform %}
-            <option value="{{platform.platform_name}}"selected>{{platform.platform_name}}</option>
-            {% else %}
-            <option value="{{platform.platform_name}}">{{platform.platform_name}}</option>
-            {%endif%}
-                  {% endfor %}
+              {% if platform.platform_name == game.platform %}
+              <option value="{{platform.platform_name}}"selected>{{platform.platform_name}}</option>
+              {% else %}
+              <option value="{{platform.platform_name}}">{{platform.platform_name}}</option>
+              {%endif%}
+            {% endfor %}
           </select>
           <label>Choose Platform</label>
         </div>
@@ -67,7 +66,11 @@
          <select id="rating" name="rating">
            <option value="" disabled selected>Rating</option>
            {% for rate in ratings %}
-           <option value="{{rate.rating}}">{{rate.rating}}</option>
+             {% if rate.rating == game.rating %}
+             <option value="{{rate.rating}}" selected>{{game.rating}}</option>
+             {% else %}
+             <option value="{{rate.rating}}">{{rate.rating}}</option>
+             {% endif %}
            {% endfor %}
           </select>
           <label>Game Rating</label>
