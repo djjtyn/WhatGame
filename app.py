@@ -39,6 +39,22 @@ def edit_review(game_id):
     return render_template('editreview.html',game = game_review, 
     platforms = all_platforms, ratings = all_ratings )
 
+@app.route ('/update_review/<game_id>', methods=["POST"])
+def update_review(game_id):
+    games=mongo.db.games
+    games.update( {'_id': ObjectId(game_id)},
+    {'game_name': request.form.get('game_name'),
+     'publisher': request.form.get('publisher'),
+     'release': request.form.get('release'),
+     'genre': request.form.get('genre'),
+     'platform': request.form.get('platform'),
+     'multiplayer': request.form.get('multiplayer'),
+     'rating': request.form.get('rating'),
+     'description': request.form.get('description'),
+     'image':request.form.get('image')
+    })
+    return redirect (url_for('view_games'))
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0',
             port=8080,
