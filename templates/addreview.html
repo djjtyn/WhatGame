@@ -16,7 +16,7 @@
         <div class="input-field col s12">
           <i class="fa fa-cogs prefix" aria-hidden="true"></i>
           <input id="publisher" name="publisher" type="text" class="validate">
-          <label for="publisher">Publisher</label>
+          <label for="publisher">Developer(s)</label>
         </div>
       </div><!--publisher-->
       <div class="row">
@@ -36,7 +36,7 @@
       <div class="row" id="list">
         <div class="input-field col s12">
           <i class="fas fa-tv prefix"></i>
-          <select id="platform" name="platform" multiple>
+          <select id="platform" name="platform">
             <option value="" disabled selected>Choose Platform</option>
             {% for platform in platforms %}
             <option value="{{platform.platform_name}}">{{platform.platform_name}}</option>
@@ -50,8 +50,8 @@
          <i class="fas fa-gamepad prefix"></i>
            <select id="multiplayer" name="multiplayer">
              <option value="" disabled selected>Select One</option>
-             <option value="yes">Yes</option>
-             <option value="no">No</option>
+             <option value="Yes">Yes</option>
+             <option value="No">No</option>
            </select>
            <label>Local Multiplayer?</label>
        </div>
