@@ -55,6 +55,11 @@ def update_review(game_id):
     })
     return redirect (url_for('view_games'))
 
+@app.route('/delete_review/<game_id>')
+def delete_review(game_id):
+    mongo.db.games.remove({'_id': ObjectId(game_id)})
+    return redirect(url_for('view_games'))
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0',
             port=8080,
