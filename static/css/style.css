@@ -1,10 +1,16 @@
+ body {
+     height: 100vh;
+     background-color: red;
+ } /*Red BG Color*/
+
+/*Index.html*/
 .index {
   height: 100%;
   width: 100%;
   background-image: url("../img/indexbg.png");
   background-position: center center;
   background-size: cover;
- }/*Index.html background*/
+ } background image and styling*/
 
  .view_btn {
      background-color: red;
@@ -29,45 +35,57 @@
      padding: 5px;
      float: right;
      border-radius: 50%;
- }
+ }/*Add button height,padding,margins and color*/
 
  .view_btn i, .add_btn i {
      font-size: 60px;
      padding: 10px;
- }
+ }/*Size increase and padding for the button icons*/
  
-
- /*OverLay for Background Images*/
- .overlay {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  background-color: rgba(29, 28, 28, 0.5);
-  top: 0;
-  bottom: 0;
-  text-align: center;
-  }/*OverLay for Background Images*/
-
 /*Add/Edit Form Styling*/
  form {
      background-color: black;
      color: white;
      border-radius: 2%;
- }
+ }/*Form bg color, font color and border radius*/
 
- form .addreview{
+form .addreview{
      color: white;
      border: 2px solid white;
-     text-align: center;
      width: 20%;
      margin-left: 40%;
      margin-right: 40%;
- }/* font color,border,text aligning and button positioning for form*/
+ }/* font color,border,text aligning and button positioning for add review button*/
 
  .form-bg {
      background:linear-gradient(rgb(245, 101, 101), rgb(243, 101, 6));
      color: white;
  }/* red color behind the form */
+
+ /*Games.html*/
+ .collapsible-header {
+     background-color: black;
+     color: white;
+     font-weight: 900;
+ }
+
+ .collapsible-body {
+      background-color: black;
+     color: white;
+ }
+
+ .collapsible-body .game_img {
+     border: 1px solid white;
+ }
+
+.collapsible-body a {
+    color: white;
+    border: 1px solid white;
+}
+
+.collapsible-body .buttons {
+    text-align: center;
+}
 
 
 

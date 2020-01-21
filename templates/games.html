@@ -5,14 +5,12 @@
     {% for game in games %}
       <li>
         <div class="collapsible-header">
-          <div class="accord_top">
             <i class="material-icons">expand_more</i>
             {{game.game_name}} - Rating: {{game.rating}}
-          </div>
         </div><!--Game Name & Rating-->
       <div class="collapsible-body">
         <div class="game_img">
-          <img src = "{{game.image}}" width="300" height = "400" />
+          <img src = "{{game.image}}" />
         </div><!--Game Image first in accordian body-->
         <div class="publisher">
           <i class="fas fa-cogs"></i>
@@ -28,11 +26,11 @@
           </div><!--Genre fourth in accordian body-->
           <div class="platform">
             <i class="fas fa-tv"></i>
-            </strong>Platform:</strong> {{game.platform}}
+            <strong>Platform:</strong> {{game.platform}}
           </div><!--Platform fifth in accordian body-->
           <div class="multiplayer">
             <i class="fas fa-gamepad"></i>
-            </strong>Local Multiplayer?</strong>{{game.multiplayer}}
+            <strong>Local Multiplayer?</strong>{{game.multiplayer}}
           </div><!--Local Multiplayer sixth in accordian body-->
           <div class="description">
             <strong>Overview</strong>
