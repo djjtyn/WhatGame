@@ -1,10 +1,46 @@
 .index {
   height: 100%;
   width: 100%;
-  background-image: url("../img/ms3bg.jpeg");
- 
-  
-}
+  background-image: url("../img/indexbg.png");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+ }/*Index.html background*/
+
+ .view_btn {
+     background-color: red;
+     height: 100px;
+     width: 200px;
+     margin-left: 25px;
+     margin-top: 400px;
+     padding: 5px;
+     float: left;
+ }/*View button height,padding,margins and color*/
+
+  .add_btn {
+     background-color: red;
+     height: 100px;
+     width: 200px;
+     margin-right: 25px;
+     margin-top: 400px;
+     padding: 5px;
+     float: right;
+ }
+
+ .view_btn i, .add_btn i {
+     font-size: 60px;
+     padding: 10px;
+ }
+
+ /*OverLay for Background Images*/
+ .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  }
 
 
 
