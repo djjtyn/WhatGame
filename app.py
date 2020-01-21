@@ -16,6 +16,9 @@ app.config["MONGO_URI"] = os.getenv("uri")
 mongo = PyMongo(app)
 
 @app.route('/')
+def home_page():
+    return render_template("index.html")
+
 @app.route('/view_games')
 def view_games():
     return render_template("games.html", games = list(mongo.db.games.find()))
@@ -29,7 +32,12 @@ def add_review():
 def review_added():
     games = mongo.db.games
     games.insert_one(request.form.to_dict())
-    return redirect(url_for('view_games'))
+    return redirect(url_for('add_confirmation'))
+
+@app.route('/add_confirmation')
+def add_confirmation():
+   return render_template('addconfirmation.html')
+
 
 @app.route ('/edit_review/<game_id>')
 def edit_review(game_id):
