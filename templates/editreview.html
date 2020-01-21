@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="form-bg">
-<h3 class = "center">Edit Review</h3>
+<h1 class = "center">Edit Review</h1>
 <div class="container">
 <div class="row">
     <form action = "{{url_for('update_review', game_id=game._id)}}" method = "POST" class="col s12">
@@ -98,7 +98,7 @@
         </div>
       </div>
       <div class="row">
-        <button class="btn waves-effect waves-light" type="submit" name="action">Edit Review
+        <button class="btn waves-effect waves-light form-center-button" type="submit" name="action">Edit Review
           <i class="material-icons right">add</i>
         </button>
       </div><!--button-->

@@ -49,12 +49,14 @@
      border-radius: 2%;
  }/*Form bg color, font color and border radius*/
 
-form .addreview{
+form .form-center-button{
      color: white;
      border: 2px solid white;
+     border-radius: 25px;
      width: 20%;
      margin-left: 40%;
      margin-right: 40%;
+
  }/* font color,border,text aligning and button positioning for add review button*/
 
  .form-bg {
