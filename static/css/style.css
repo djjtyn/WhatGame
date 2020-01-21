@@ -78,6 +78,8 @@ form .form-center-button{
 
  .collapsible-body .game_img {
      border: 1px solid white;
+     width: 365px;
+     padding: 3px;
  }
 
 .collapsible-body a {
