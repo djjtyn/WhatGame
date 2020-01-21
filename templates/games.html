@@ -1,68 +1,56 @@
 {% extends 'base.html' %}
 {% block content %}
-{% for game in games %}
 <div class="row">
-	<div class="col s12 m12">
-		<div class="card blue-grey darken-1 center">
-			<div class="card-content white-text">
-				<div class="game_img">
-                  <img src = "{{game.image}}" width="300" height = "400" />
-                </div>
-                <div class="game_name">
-                  <h4>
-                    <i class="fas fa-gamepad"></i>
-                    {{game.game_name}}
-                  </h4>
-                </div>
-				<div class="publisher">
-				  <h6>
-                    <i class="fas fa-cogs"></i>
-                    Publisher: {{game.publisher}}</h6>
-				</div>
-                <div class="date">
-                  <h6>
-                    <i class="fas fa-calendar-day"></i>
-                    Release Date: {{game.release}}
-                  </h6>
-                </div>
-                <div class="genre">
-                  <h6>
-                    <i class="far fa-question-circle"></i>
-                    Genre: {{game.genre}}</h6>
-                </div>
-                <div class="platform">
-                  <h6>
-                    <i class="fas fa-tv"></i>
-                    Platform Used: {{game.platform}}
-                  </h6>
-                </div>
-                <div class="multiplayer">
-                  <h6>
-                    <i class="fas fa-gamepad"></i>
-                    Local Multiplayer? {{game.multiplayer}}
-                  </h6>
-                </div>
-                <div class="rating">
-                  <h6> 
-                    <i class="far fa-star"></i>
-                    Rating: {{game.rating}}
-                  </h6>
-                </div>
-                <div class="description">
-                <h5 class="center">Overview</h6>
-			      <p>{{game.description}}</p>
-                </div>
-			</div>
-			<div class="card-action">
-			  <a href="{{url_for('edit_review', game_id=game._id)}}"class="waves-effect waves-light btn edit_btn ">
-                <i class="material-icons">games</i>
-                Edit Review</a>
-              <a href="{{url_for('delete_review', game_id=game._id)}}"class="waves-effect waves-light btn edit_btn ">
-                <i class="material-icons">games</i>
-                Delete Review</a>
-			</div>
-		</div>
-	</div>
-</div>
-{% endfor %}
+  <ul class="collapsible">
+    {% for game in games %}
+      <li>
+        <div class="collapsible-header">
+          <div class="col s12">
+            <i class="material-icons">expand_more</i>
+            {{game.game_name}} - {{game.rating}}
+          </div>
+        </div><!--Game Name & Rating-->
+      <div class="collapsible-body">
+        <div class="game_img">
+          <img src = "{{game.image}}" width="300" height = "400" />
+        </div><!--Game Image first in accordian body-->
+        <div class="publisher">
+          <i class="fas fa-cogs"></i>
+          <strong>Publisher:</strong> {{game.publisher}}
+		</div><!--Publisher second in accordian body-->
+          <div class="date">
+            <i class="fas fa-calendar-day"></i>
+           <strong>Release Date:</strong> {{game.release}}
+          </div><!--Release Date third in accordian body-->
+          <div class="genre">
+            <i class="far fa-question-circle"></i>
+            <strong>Genre:</strong> {{game.genre}}</h6>
+          </div><!--Genre fourth in accordian body-->
+          <div class="platform">
+            <i class="fas fa-tv"></i>
+            </strong>Platform:</strong> {{game.platform}}
+          </div><!--Platform fifth in accordian body-->
+          <div class="multiplayer">
+            <i class="fas fa-gamepad"></i>
+            </strong>Local Multiplayer?</strong>{{game.multiplayer}}
+          </div><!--Local Multiplayer sixth in accordian body-->
+          <div class="description">
+            <strong>Overview</strong>
+		    <p>{{game.description}}</p>
+          </div><!--Description seventh in accordian body-->
+          <div class="buttons">
+            <a href="{{url_for('edit_review', game_id=game._id)}}"class="waves-effect waves-light btn edit_btn ">
+              <i class="material-icons">games</i>
+              Edit Review
+            </a><!--Edit Review Button-->  
+            <a href="{{url_for('delete_review', game_id=game._id)}}"class="waves-effect waves-light btn edit_btn ">
+              <i class="material-icons">games</i>
+              Delete Review
+            </a><!--Delete Review Button--> 
+          </div><!--Edit and Delete Review Buttons-->    
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</row>
 {% endblock %}
