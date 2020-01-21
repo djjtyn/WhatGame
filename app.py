@@ -68,6 +68,18 @@ def delete_review(game_id):
     mongo.db.games.remove({'_id': ObjectId(game_id)})
     return redirect(url_for('view_games'))
 
+@app.route('/show_platform_form')
+def show_platform_form():
+    return render_template('addplatform.html')    
+
+@app.route('/insert_platform', methods=["POST"])
+def insert_platform():
+    platforms = mongo.db.platforms
+    platform_doc = {'platform_name':request.form.get('platform_name')}
+    platforms.insert_one(platform_doc)
+    return redirect (url_for('view_games'))
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0',
             port=8080,
