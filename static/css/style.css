@@ -11,6 +11,13 @@
    color: white;
  }
 
+.game-btn {
+    border-radius: 25px;
+    color: white;
+    background-color: black;
+    margin-top: 5px;
+} /*Buttons on games.html*/
+
 /*Index.html*/
 .index {
   height: 100%;
@@ -68,15 +75,14 @@
  }/* font color,border,text aligning and button positioning for add review button*/
 
 .confirmation-button {
-    margin-left: 30%;
-    margin-right: 30%;
-    width: 40%;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
     border: 2px solid white;
     border-radius: 25px;
     color: white;
     background-color: black;
     padding-bottom: 40px;
-    text-align: center
 }
 
  /*Games.html*/
