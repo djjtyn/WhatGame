@@ -83,8 +83,11 @@ form .form-center-button{
 
  .collapsible-body .game_img {
      border: 1px solid white;
-     width: 365px;
-     padding: 3px;
+ }
+
+ .game_img img {
+     width: 100%;
+     height: 100%;
  }
 
 .collapsible-body a {
@@ -104,6 +107,8 @@ h1 {
 #mobile-demo li a {
     color: white;
 }
+
+
 
 
 
