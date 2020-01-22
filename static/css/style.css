@@ -1,12 +1,14 @@
+ /*Generic Styling for all pages*/
  body {
      height: 100vh;
-     background-color: red;
+     background-image: url("../img/bg.png")
  } /*Red BG Color*/
 
- h2 {
+ h2, h1 {
    padding-top: 10px;
    padding-bottom: 20px;
    text-align: center;
+   color: white;
  }
 
 /*Index.html*/
@@ -112,10 +114,7 @@
     text-align: center;
 }
 
-h1 {
-    color: white;
-    text-align: center;
-}
+
 
 #mobile-demo li a {
     color: white;

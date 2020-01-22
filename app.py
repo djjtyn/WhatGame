@@ -74,7 +74,7 @@ def insert_platform():
     platforms = mongo.db.platforms
     platform_doc = {'platform_name':request.form.get('platform_name')}
     platforms.insert_one(platform_doc)
-    return redirect (url_for('view_games'))
+    return redirect (url_for('add_review'))
 
 
 if __name__ == '__main__':
