@@ -91,6 +91,15 @@ form .form-center-button{
     text-align: center;
 }
 
+h1 {
+    color: white;
+    text-align: center;
+}
+
+#mobile-demo li a {
+    color: white;
+}
+
 
 
 
