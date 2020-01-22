@@ -11,12 +11,7 @@
    color: white;
  }
 
-.game-btn {
-    border-radius: 25px;
-    color: white;
-    background-color: black;
-    margin-top: 5px;
-} /*Buttons on games.html*/
+
 
 /*Index.html*/
 .index {
@@ -71,8 +66,14 @@
      width: 20%;
      margin-left: 40%;
      margin-right: 40%;
+     line-height: 24px;
+}/* font color,border,text aligning and button positioning for add review button*/
 
- }/* font color,border,text aligning and button positioning for add review button*/
+.center-button i {
+    transform:translateY(-3px);
+    margin-left: 0;
+    
+}
 
 .confirmation-button {
     margin-left: 25%;
@@ -118,7 +119,14 @@
 
 .collapsible-body .buttons {
     text-align: center;
-}
+}/*Centering Buttons on games.html page*/
+
+.game-btn {
+    border-radius: 25px;
+    color: white;
+    background-color: black;
+    margin-top: 5px;
+} /*Buttons on games.html*/
 
 
 
