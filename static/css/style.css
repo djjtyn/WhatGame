@@ -3,6 +3,12 @@
      background-color: red;
  } /*Red BG Color*/
 
+ h2 {
+   padding-top: 10px;
+   padding-bottom: 20px;
+   text-align: center;
+ }
+
 /*Index.html*/
 .index {
   height: 100%;
@@ -60,7 +66,6 @@ form .form-center-button{
  }/* font color,border,text aligning and button positioning for add review button*/
 
  .form-bg {
-     background:linear-gradient(rgb(245, 101, 101), rgb(243, 101, 6));
      color: white;
  }/* red color behind the form */
 

@@ -14,17 +14,17 @@
 	<header>
 		<nav>
 			<div class="nav-wrapper black">
-				<a href="#" class="brand-logo">WhatGame?</a>
+				<a href="{{url_for('view_games')}}" class="brand-logo">WhatGame?</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="sass.html">Sass</a></li>
-					<li><a href="badges.html">Components</a></li>
-					<li><a href="collapsible.html">JavaScript</a></li>
+					<li><a href="{{url_for('view_games')}}">View All Reviews</a></li>
+					<li><a href="{{url_for('add_review')}}">Add a Review</a></li>
+					<li><a href="{{url_for('show_platform_form')}}">Add a Platform</a></li>
 				</ul>
                 <ul class="side-nav black" id="mobile-demo">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">New Task</a></li>
-                    <li><a href="#">Manage Categories</a></li>
+                    <li><a href="{{url_for('view_games')}}">View All Reviews</a></li>
+                    <li><a href="{{url_for('add_review')}}">Add a Review</a></li>
+                    <li><a href="{{url_for('show_platform_form')}}">Add a Platform</a></li>
                 </ul>
 			</div>
 		</nav>
