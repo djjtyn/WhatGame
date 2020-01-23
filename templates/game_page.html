@@ -11,35 +11,51 @@
   </div><!--Game Image-->
   <div class="col s12 m6">
     <div class="game_text">
-    <div class="rating">
-      <i class="far fa-star"></i>
-      <strong>Rating:</strong> {{game.rating}}
-    </div>
-    <div class="publisher">
-          <i class="fas fa-cogs"></i>
-          <strong>Publisher:</strong> {{game.publisher}}
-		</div><!--Publisher second in accordian body-->
-          <div class="date">
-            <i class="fas fa-calendar-day"></i>
-           <strong>Release Date:</strong> {{game.release}}
-          </div><!--Release Date third in accordian body-->
-          <div class="genre">
-            <i class="far fa-question-circle"></i>
-            <strong>Genre:</strong> {{game.genre}}</h6>
-          </div><!--Genre fourth in accordian body-->
-          <div class="platform">
-            <i class="fas fa-tv"></i>
-            <strong>Platform:</strong> {{game.platform}}
-          </div><!--Platform fifth in accordian body-->
-          <div class="multiplayer">
-            <i class="fas fa-gamepad"></i>
-            <strong>Local Multiplayer?</strong>{{game.multiplayer}}
-          </div><!--Local Multiplayer sixth in accordian body-->
-          <div class="description">
-            <strong>Overview</strong>
-		    <p>{{game.description}}</p>
-          </div>
-          </div>
+      <div class="rating">
+        <i class="far fa-star"></i>
+        <strong>Rating:</strong> {{game.rating}}
+      </div>
+      <div class="publisher">
+        <i class="fas fa-cogs"></i>
+        <strong>Publisher:</strong> {{game.publisher}}
+	  </div><!--Publisher second in accordian body-->
+      <div class="date">
+        <i class="fas fa-calendar-day"></i>
+        <strong>Release Date:</strong> {{game.release}}
+      </div><!--Release Date third in accordian body-->
+      <div class="genre">
+        <i class="far fa-question-circle"></i>
+        <strong>Genre:</strong> {{game.genre}}</h6>
+      </div><!--Genre fourth in accordian body-->
+      <div class="platform">
+        <i class="fas fa-tv"></i>
+        <strong>Platform:</strong> {{game.platform}}
+      </div><!--Platform fifth in accordian body-->
+      <div class="multiplayer">
+        <i class="fas fa-gamepad"></i>
+        <strong>Local Multiplayer?</strong>{{game.multiplayer}}
+     </div><!--Local Multiplayer sixth in accordian body-->
+    </div> 
+  </div><!--Text beside the Game picture-->
 </div>
-
+<div class="row">
+  <div class="col s12">
+    <div class="description">
+      <strong>Overview</strong>
+      <p>{{game.description}}</p>
+    </div>
+  </div>
+</div><!--Game Description Area-->
+<div class="row">
+  <div class="buttons">
+    <a href="{{url_for('edit_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn">
+      <i class="material-icons">edit</i>
+      Edit 
+    </a><!--Edit Review Button-->  
+    <a href="{{url_for('delete_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn ">
+      <i class="material-icons">delete</i>
+      Delete 
+    </a><!--Delete Review Button--> 
+  </div>
+</div>
 {% endblock %}

@@ -11,6 +11,37 @@
    color: white;
  }
 
+/*all_games HTML*/
+.all_games_list {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 2%;
+    padding: 10px;
+    margin: 5px;
+}/*sets the bg color,font color, font size and border radius for the unordered list element. */
+
+.all_games_list .name_and_rating {
+    margin: 15px;
+    padding: 10px;
+} /*Margin and padding for unordered list text elements*/
+
+.all_games_list li {
+    border: 1px solid white;
+    padding: 10px;
+    margin: 15px;
+} /*Border, padding and margin for ul elements li children*/
+
+.description {
+    color: white;
+}/*Text color for Game Description*/
+
+.buttons {
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
 
 
 /*Index.html*/
@@ -117,10 +148,14 @@
 }/*Centering Buttons on games.html page*/
 
 .game-btn {
+    width: 130px;
+    line-height: 14px;
     border-radius: 25px;
+    border: 2px solid white;
     color: white;
     background-color: black;
-    margin-top: 5px;
+    margin: 5px;
+    text-align: center;
 } /*Buttons on games.html*/
 
 

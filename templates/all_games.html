@@ -7,12 +7,16 @@
 </div>
 <div class="row">
   <div class="col s12">
-    <ul>
+    <ul class = "all_games_list">
        {% for game in games %}
        <li>
-         <div>
+         <div class = "name_and_rating">
            {{game.game_name}}<br> Rating: {{game.rating}}
          </div>
+         <a href="{{url_for('show_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn ">
+              <i class="material-icons">remove_red_eye</i>
+              View Full Review
+            </a>
        </li>
 
        {% endfor %}
