@@ -50,6 +50,7 @@ def edit_review(game_id):
 @app.route ('/update_review/<game_id>', methods=["POST"])
 def update_review(game_id):
     games=mongo.db.games
+    game_review = mongo.db.games.find_one({"_id":ObjectId(game_id)})
     games.update( {'_id': ObjectId(game_id)},
     {'game_name': request.form.get('game_name'),
      'publisher': request.form.get('publisher'),
@@ -61,7 +62,7 @@ def update_review(game_id):
      'description': request.form.get('description'),
      'image':request.form.get('image')
     })
-    return redirect (url_for('view_games'))
+    return render_template('game_page.html', game = game_review)
 
 @app.route('/delete_review/<game_id>')
 def delete_review(game_id):
