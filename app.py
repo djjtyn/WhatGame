@@ -66,7 +66,7 @@ def update_review(game_id):
 @app.route('/delete_review/<game_id>')
 def delete_review(game_id):
     mongo.db.games.remove({'_id': ObjectId(game_id)})
-    return redirect(url_for('view_games'))
+    return redirect(url_for('all_games'))
 
 @app.route('/show_platform_form')
 def show_platform_form():

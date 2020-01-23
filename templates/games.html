@@ -9,9 +9,7 @@
         <li>
           <div class="collapsible-header">
             <i class="material-icons">expand_more</i>
-            
-              {{game.game_name}}<br> Rating: {{game.rating}}
-
+            {{game.game_name}}<br> Rating: {{game.rating}}
           </div><!--Game Name & Rating-->
           <div class="collapsible-body">
              <div class="col s12">
@@ -47,11 +45,11 @@
           <div class="buttons">
             <a href="{{url_for('edit_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn">
               <i class="material-icons">edit</i>
-              Edit 
+              Edit Review
             </a><!--Edit Review Button-->  
             <a href="{{url_for('delete_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn ">
               <i class="material-icons">delete</i>
-              Delete 
+              Delete Review
             </a><!--Delete Review Button--> 
           </div><!--Edit and Delete Review Buttons-->    
       </div>
