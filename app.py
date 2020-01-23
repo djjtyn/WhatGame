@@ -16,6 +16,9 @@ app.config["MONGO_URI"] = os.getenv("uri")
 mongo = PyMongo(app)
 
 @app.route('/')
+def all_games():
+    return render_template ("all_games.html", games=list(mongo.db.games.find()))
+
 @app.route('/view_games')
 def view_games():
     return render_template("games.html", games = list(mongo.db.games.find()))
@@ -75,6 +78,14 @@ def insert_platform():
     platform_doc = {'platform_name':request.form.get('platform_name')}
     platforms.insert_one(platform_doc)
     return redirect (url_for('add_review'))
+
+@app.route ('/show_review/<game_id>')
+def show_review(game_id):
+    game_review = mongo.db.games.find_one({"_id":ObjectId(game_id)})
+    all_platforms =mongo.db.platforms.find()
+    all_ratings = mongo.db.rating.find()
+    return render_template('game_page.html',game = game_review, 
+    platforms = all_platforms, ratings = all_ratings )
 
 
 if __name__ == '__main__':

@@ -103,11 +103,6 @@
      margin-bottom: 10px;
  }
 
- .game_img img {
-     width: 100%;
-     height: 100%;
- }
-
  .description {
      text-align: center;
  }
@@ -131,6 +126,22 @@
 
 
 #mobile-demo li a {
+    color: white;
+}
+
+/*Game_page HTML*/
+.game-name {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.game-page-image {
+     width: 100%;
+     height: 100%;
+     border: 1px solid black;
+ }
+
+.game_text {
     color: white;
 }
 
