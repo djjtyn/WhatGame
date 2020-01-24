@@ -1,13 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
-
-{% for game in games %}
-    <li>
-        <div class="collapsible-header">
-            <div class="col s9">
-                <strong>  {{game.game_name}}</strong> -
-                <i class="material-icons prefix">grade</i> {{game.rating}}
+<h1>Top Rated Games</h1>
+<div class="row">
+  <div class="col s12">
+    <ul>
+    {% for game in games %}
+      <li>
+        <div class="all-games-summary">
+          <div class="row">
+            <div class="center_icon_and_text">
+              <a href="{{url_for('show_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn">
+                <i class="material-icons">remove_red_eye</i>
+                <br>
+                View Full Review
+              </a>
             </div>
-    </li>
+            <div class="name_and_rating">
+              {{game.game_name}}<br> Rating: {{game.rating}}
+            </div><!--Game Name & Rating-->
+          </div>
+        </div>
+      </li>
     {% endfor %}
-    {%endblock%}
+    </ul>
+  </div>
+  </div>
+
+
+{% endblock %}
