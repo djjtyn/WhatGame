@@ -73,9 +73,9 @@
 }/*Text color for Game Description*/
 
 .buttons {
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 35%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 
