@@ -2,11 +2,13 @@
 {% block content %}
 <div class="row">
   <div class="col s12">
-    <h2>Thank You for adding your review to our collection</h2>
-    <h2>Have a look at the full list of reviews available by clicking the button below</h2>
+    <h2>Thank You for your edit to this game review</h2>
+    <h2>You can return to the review and see your changes by clicking the button below</h2>
+  </div>
+  <div class="col s12"> 
      <a href="{{url_for('show_review', game_id=game._id)}}"class="waves-effect waves-light btn edit_btn confirmation-button">
-       <i class="material-icons">view_list</i>
-        View Reviews
+       <i class="material-icons">remove_red_eye</i>
+        Return to Review
      </a><!--Edit Review Button-->  
   </div> 
 </div>
