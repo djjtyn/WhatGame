@@ -62,7 +62,7 @@ def update_review(game_id):
      'description': request.form.get('description'),
      'image':request.form.get('image')
     })
-    return render_template('game_page.html', game = game_review)
+    return render_template('edit_review_confirmation.html',game=game_review)
 
 @app.route('/delete_review/<game_id>')
 def delete_review(game_id):
@@ -83,10 +83,8 @@ def insert_platform():
 @app.route ('/show_review/<game_id>')
 def show_review(game_id):
     game_review = mongo.db.games.find_one({"_id":ObjectId(game_id)})
-    all_platforms =mongo.db.platforms.find()
-    all_ratings = mongo.db.rating.find()
-    return render_template('game_page.html',game = game_review, 
-    platforms = all_platforms, ratings = all_ratings )
+    return render_template('game_page.html',game = game_review)
+
 
 
 if __name__ == '__main__':

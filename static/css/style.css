@@ -13,10 +13,10 @@
 
 /*all_games HTML*/
 .all_games_list {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 18px;
-    border-radius: 2%;
+    border-radius: 10%;
     padding: 10px;
     margin: 5px;
 }/*sets the bg color,font color, font size and border radius for the unordered list element. */
@@ -85,7 +85,7 @@
  
 /*Add/Edit Form Styling*/
  form {
-     background-color: black;
+     background-color: rgba(0, 0, 0, 0.5);
      color: white;
      border-radius: 2%;
  }/*Form bg color, font color and border radius*/
@@ -165,6 +165,14 @@
 }
 
 /*Game_page HTML*/
+.game_page_html {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-radius: 10%;
+    padding: 15px;
+    margin-top: 15px;
+}
+
 .game-name {
     font-size: 50px;
     color: white;
@@ -173,11 +181,12 @@
 .game-page-image {
      width: 100%;
      height: 100%;
-     border: 1px solid black;
+     border: 1px solid white;
  }
 
 .game_text {
     color: white;
+    margin-top: 5px;
 }
 
 
