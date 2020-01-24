@@ -1,6 +1,6 @@
  /*Generic Styling for all pages*/
- body {
-     height: 100vh;
+ html,body {
+     height: 100%;
      background-image: url("../img/bg.png")
  }/*background image for all pages*/
 
@@ -27,24 +27,34 @@
    color: white;
  } /*padding,color and text aligning for all h1 and h2 elements*/
 
-.page-footer {
+footer {
      background-color: rgba(0, 0, 0, 0.5);
+     color: white;
      text-align: center;
      line-height: 30px;
- }
+     margin-top: 25px;
+ }/*bg color, text color,text aligning,line height and top margin for footer*/
+
+ .wrapper {
+     min-height: 100%;
+ }/*Sets min height for everything in the body except the footer */
 
 
 
 /*all_games HTML*/
 .all-games-summary {
     background-color:black;
+    height: 130px;
     color: white;
     font-size: 18px;
     padding: 5px;
-}/*sets the bg color,font color, font size and border radius for the unordered list element. */
+    border: 1px solid white;
+}/*sets the bg color,font color, font size and border for the list elements children. */
 
-.center_icon_and_text {
+.center_icon_and_text a {
    text-align: center;
+   line-height: 20px;
+   color: lime;
 }
 
 .all-games-summary a {
@@ -57,13 +67,12 @@
 }
 
 
-.all_games_list .name_and_rating {
+.all-games-summary .name_and_rating {
     margin: 15px;
     padding: 10px;
 } /*Margin and padding for unordered list text elements*/
 
 .all_games_list li {
-    border: 1px solid white;
     padding: 10px;
     margin: 15px;
 } /*Border, padding and margin for ul elements li children*/
