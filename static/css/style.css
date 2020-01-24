@@ -55,6 +55,7 @@ footer {
    text-align: center;
    line-height: 20px;
    color: lime;
+   
 }
 
 .all-games-summary a {
@@ -70,6 +71,7 @@ footer {
 .all-games-summary .name_and_rating {
     margin: 15px;
     padding: 10px;
+    float: left;;
 } /*Margin and padding for unordered list text elements*/
 
 .all_games_list li {
