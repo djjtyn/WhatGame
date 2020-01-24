@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for game in games %}
+    <li>
+        <div class="collapsible-header">
+            <div class="col s9">
+                <strong>  {{game.game_name}}</strong> -
+                <i class="material-icons prefix">grade</i> {{game.rating}}
+            </div>
+    </li>
+    {% endfor %}
+    {%endblock%}

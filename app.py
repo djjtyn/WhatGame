@@ -19,6 +19,10 @@ mongo = PyMongo(app)
 def all_games():
     return render_template ("all_games.html", games=list(mongo.db.games.find()))
 
+@app.route('/top_rated')
+def top_rated():
+    return render_template ("top_rated.html", games=list(mongo.db.games.find().sort("rating", -1)))
+
 @app.route('/view_games')
 def view_games():
     return render_template("games.html", games = list(mongo.db.games.find()))
