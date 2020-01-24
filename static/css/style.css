@@ -4,6 +4,10 @@
      background-image: url("../img/bg.png")
  } /*Red BG Color*/
 
+ * {
+     font-family: arial;
+ }
+
  h2, h1 {
    padding-top: 10px;
    padding-bottom: 20px;
@@ -12,14 +16,26 @@
  }
 
 /*all_games HTML*/
-.all_games_list {
-    background-color: rgba(0, 0, 0, 0.5);
+.all-games-summary {
+    background-color:black;
     color: white;
     font-size: 18px;
-    border-radius: 10%;
-    padding: 10px;
-    margin: 5px;
+    padding: 5px;
 }/*sets the bg color,font color, font size and border radius for the unordered list element. */
+
+.center_icon_and_text {
+   text-align: center;
+}
+
+.all-games-summary a {
+    height: 100%;
+}
+
+.all-games-summary i {
+    font-size: 35px;
+    padding: 5px;
+}
+
 
 .all_games_list .name_and_rating {
     margin: 15px;
@@ -168,7 +184,6 @@
 .game_page_html {
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid white;
-    border-radius: 10%;
     padding: 15px;
     margin-top: 15px;
 }

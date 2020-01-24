@@ -1,26 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
+<h1>All Game Reviews</h1>
 <div class="row">
   <div class="col s12">
-    <h1>All Game Reviews</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col s12">
-    <ul class = "all_games_list">
-       {% for game in games %}
-       <li>
-         <div class = "name_and_rating">
-           {{game.game_name}}<br> Rating: {{game.rating}}
-         </div>
-         <a href="{{url_for('show_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn ">
+    <ul class="collapsible">
+    {% for game in games %}
+      <li>
+        <div class="all-games-summary">
+          <div class="row">
+            <div class="col-sm-12 col-md-3 center_icon_and_text">
+              <a href="{{url_for('edit_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn">
               <i class="material-icons">remove_red_eye</i>
+              <br>
               View Full Review
-            </a>
-       </li>
-
-       {% endfor %}
-    </ul>
+              </a>
+    </div>
+    <div class="col-sm-12 col-md-3">
+    {{game.game_name}}<br> Rating: {{game.rating}}
+    </div><!--Game Name & Rating-->
+    </li>
+    {% endfor %}
+  </ul>
   </div>
-</div>
+  </div>
+
+
 {% endblock %}
