@@ -2,18 +2,38 @@
  body {
      height: 100vh;
      background-image: url("../img/bg.png")
- } /*Red BG Color*/
+ }/*background image for all pages*/
 
  * {
      font-family: arial;
- }
+ }/*Font family for all text-arial*/
 
- h2, h1 {
+ .nav-wrapper ul li a {
+     padding: 10px;
+     margin: 10px;
+     line-height: 30px;
+ }/*padding,margin an line height stylings for the navbar options*/
+
+ .nav-wrapper .brand-logo {
+     padding: 10px;
+     margin: 10px;
+     line-height: 30px;
+ }/*padding,margin an line height stylings for the navbar branding*/
+
+ h1, h2 {
    padding-top: 10px;
    padding-bottom: 20px;
    text-align: center;
    color: white;
+ } /*padding,color and text aligning for all h1 and h2 elements*/
+
+.page-footer {
+     background-color: rgba(0, 0, 0, 0.5);
+     text-align: center;
+     line-height: 30px;
  }
+
+
 
 /*all_games HTML*/
 .all-games-summary {
