@@ -89,6 +89,12 @@ def show_review(game_id):
     game_review = mongo.db.games.find_one({"_id":ObjectId(game_id)})
     return render_template('game_page.html',game = game_review)
 
+@app.route ('/search_query/<query>')
+def search_query():
+    query = request.form.get('search_query')
+    mongo.db.games.find({name:"{{query}}"})
+    return render_template('search.html')
+
 
 
 
