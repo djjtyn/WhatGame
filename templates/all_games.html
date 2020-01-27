@@ -4,27 +4,25 @@
 <div class="row">
   <div class="col s12">
     <ul>
-    {% for game in games %}
+      {% for game in games %}
       <li>
         <div class="all-games-summary">
           <div class="row">
-            <div class="center_icon_and_text">
-              <a href="{{url_for('show_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn">
-                <i class="material-icons">remove_red_eye</i>
-                <br>
-                View Full Review
-              </a>
-            </div>
+            <a href="{{url_for('show_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn">
+              <i class="material-icons">remove_red_eye</i>
+              <br>
+              View Full Review
+            </a><!--View Full Review Button-->
             <div class="name_and_rating">
               {{game.game_name}}<br> Rating: {{game.rating}}
             </div><!--Game Name & Rating-->
           </div>
-        </div>
+        </div><!--View game button and game name and rating section-->
       </li>
-    {% endfor %}
+      {% endfor %}
     </ul>
   </div>
-  </div>
+</div>
 
 
 {% endblock %}

@@ -82,12 +82,13 @@ def insert_platform():
     platforms = mongo.db.platforms
     platform_doc = {'platform_name':request.form.get('platform_name')}
     platforms.insert_one(platform_doc)
-    return redirect (url_for('all_games'))
+    return redirect (url_for('show_platform_form'))
 
 @app.route ('/show_review/<game_id>')
 def show_review(game_id):
     game_review = mongo.db.games.find_one({"_id":ObjectId(game_id)})
     return render_template('game_page.html',game = game_review)
+
 
 
 
