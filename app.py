@@ -21,7 +21,7 @@ def all_games():
 
 @app.route('/top_rated')
 def top_rated():
-    return render_template ("top_rated.html", games=list(mongo.db.games.find().sort("rating", -1)))
+    return render_template ("top_rated.html", games=list(mongo.db.games.find().sort("rating", -1).limit(10)))
 
 @app.route('/view_games')
 def view_games():
