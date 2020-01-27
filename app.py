@@ -60,7 +60,7 @@ def update_review(game_id):
      'publisher': request.form.get('publisher'),
      'release': request.form.get('release'),
      'genre': request.form.get('genre'),
-     'platform': request.form.get('platform'),
+     'platform': request.form.getlist('platform'),
      'multiplayer': request.form.get('multiplayer'),
      'rating': request.form.get('rating'),
      'description': request.form.get('description'),

@@ -37,7 +37,7 @@
       <div class="row" id="list">
         <div class="input-field col s12">
           <i class="fas fa-tv prefix"></i>
-          <select id="platform" name="platform">
+          <select multiple id="platform" name="platform" >
             <option value="" disabled selected>Choose Platform</option>
             {% for platform in platforms %}
             <option value="{{platform.platform_name}}">{{platform.platform_name}}</option>
