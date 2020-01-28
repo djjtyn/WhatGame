@@ -51,7 +51,7 @@ footer {
     border: 1px solid white;
 }/*sets the bg color,font color, font size and border for the list elements children. */
 
-.center_icon_and_text a {
+.all-games-summary a {
    text-align: center;
    line-height: 20px;
    color: lime;
@@ -79,14 +79,17 @@ footer {
     margin: 15px;
 } /*Border, padding and margin for ul elements li children*/
 
-.description {
-    color: white;
-}/*Text color for Game Description*/
+
 
 .buttons {
     display: flex;
     width: 100%;
     justify-content: center;
+}
+
+.buttons i {
+    line-height: 17px;
+    font-size: 
 }
 
 
@@ -190,17 +193,11 @@ footer {
     border: 1px solid white;
 }
 
-.collapsible-body .buttons {
-    text-align: center;
-}/*Centering Buttons on games.html page*/
-
 .game-btn {
-    width: 130px;
-    line-height: 14px;
+    width: 120px;
     border-radius: 25px;
     border: 2px solid white;
     color: white;
-    background-color: black;
     margin: 5px;
     text-align: center;
 } /*Buttons on games.html*/
@@ -217,11 +214,12 @@ footer {
     border: 1px solid white;
     padding: 15px;
     margin-top: 15px;
+    color: white;
 }
 
 .game-name {
     font-size: 50px;
-    color: white;
+   
     text-align: center;
 }
 .game-page-image {
@@ -231,7 +229,7 @@ footer {
  }
 
 .game_text {
-    color: white;
+    
     margin-top: 5px;
 }
 

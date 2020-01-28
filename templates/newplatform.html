@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="row buttons">
-<div class="col s12">
-  <h2>Thank You for adding the platform to our collection</h2>
-  <h2>Click the button below to add a review</h2>
-   <a href="{{url_for('add_review')}}"class="waves-effect waves-light btn edit_btn confirmation-button">
-              <i class="material-icons">games</i>
-              View Reviews
-            </a><!--Edit Review Button-->  
- </div> 
+  <div class="col s12">
+    <h2>Thank You for adding the platform to our collection</h2>
+    <h2>Click the button below to return to all game reviews</h2>
+     <a href="{{url_for('all_games')}}"class="waves-effect waves-light btn confirmation-button">
+       <i class="material-icons">games</i>
+       View Reviews
+     </a><!--View Reviews Button-->  
+  </div> 
 </div>
-
-
 {% endblock %}

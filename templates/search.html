@@ -1,32 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Top Rated Games</h1>
+<h1>All Game Reviews</h1>
 <div class="row">
   <div class="col s12">
     <ul>
-      {% for game in games %}
+   {% for game in doc_matches %}
       <li>
         <div class="all-games-summary">
           <div class="row">
             <div class="center_icon_and_text">
-              <a href="{{url_for('show_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn">
+              <a href="{{url_for('show_review', game_name=game.game_name)}}" class="waves-effect waves-light btn game-btn">
                 <i class="material-icons">remove_red_eye</i>
                 <br>
                 View Full Review
               </a>
-            </div><!--See Full Review Button-->
+            </div>
             <div class="name_and_rating">
-              {{game.game_name}}
-              <br> 
-              Rating: {{game.rating}}
+              {{game.game_name}}<br> Rating: {{game.rating}}
             </div><!--Game Name & Rating-->
-          </div><!--See full review button and game name with rating-->
+          </div>
         </div>
       </li>
-      {% endfor %}
+{%endfor%}
     </ul>
   </div>
-</div>
+  </div>
 
 
 {% endblock %}

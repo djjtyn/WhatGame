@@ -1,25 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="form-bg">
-  <h1 class = "center">Add a Gaming Platform</h1>
-  <h2>Cant find the right console to select? Add your console here</h2>
-  <div class="container">
+<h1>Add a Gaming Platform</h1>
+<h2>Cant find the right console to select? Add your console here</h2>
+<div class="row">
+  <form action = "{{url_for('insert_platform')}}" method = "POST" class="col s12">
+    <div class="row">   
+      <div class="input-field col s12">
+        <i class="material-icons prefix">videogame_asset</i>
+        <input name = "platform_name" id="platform_name" type="text" class="validate">
+        <label for="game_name">Add your Platform</label>
+      </div>
+    </div><!--Text Input Area-->
     <div class="row">
-      <form action = "{{url_for('insert_platform')}}" method = "POST" class="col s12">
-        <div class="row">   
-          <div class="input-field col s12">
-            <i class="material-icons prefix">videogame_asset</i>
-            <input name = "platform_name" id="platform_name" type="text" class="validate" value="">
-            <label for="game_name">Add your Platform</label>
-          </div>
-        </div><!--game_name-->
-        <div class="row">
-          <button class="btn waves-effect waves-light form-center-button center-button" type="submit" name="action" white>Add Platform
-            <i class="material-icons right">add</i>
-          </button>
-        </div><!--button-->
-      </form>
-    </div>
-  </div>
-</div>
+      <button class="btn waves-effect waves-light center-button" type="submit" name="action" white>Add Platform
+        <i class="material-icons right">add</i>
+      </button>
+    </div><!--button-->
+  </form>
+</div><!--Form to add a gaming platform-->
 {% endblock %}
