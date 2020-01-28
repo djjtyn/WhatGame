@@ -47,18 +47,7 @@
 	  $(document).ready(function() {
         $('select').material_select();
         $(".button-collapse").sideNav();//Allows the menu to show on side when menu icon is selected on smaller screens
-      });
-
-      $('.datepicker').pickadate({
-        selectMonths: true, 
-        selectYears: 15, 
-        today: 'Today',
-        clear: 'Clear',
-        close: 'Ok',
-        closeOnSelect: false 
-      });//Shows calender when release date is selected in form
-    
-      document.getElementById("calender").addEventListener("click", function(e) {
+             document.getElementById("calender").addEventListener("click", function(e) {
 	    e.stopPropagation();
       });//Allows calender to stay on screen when release date is selected in form
 
@@ -73,6 +62,19 @@
       document.getElementById("rate-list").addEventListener("click", function(e) {
 	    e.stopPropagation();
       });//Allows local rating options to stay on screen when rating is selected in form
+       $('.datepicker').pickadate({
+        selectMonths: true, 
+        selectYears: 15, 
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Ok',
+        closeOnSelect: false 
+      });//Shows calender when release date is selected in form
+      });
+
+     
+    
+ 
     </script>
   </body>
 </html>

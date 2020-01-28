@@ -84,18 +84,27 @@ def insert_platform():
     platforms.insert_one(platform_doc)
     return render_template('newplatform.html')
 
-@app.route ('/show_review/<game_id>')
-def show_review(game_id):
-    game_review = mongo.db.games.find_one({"_id":ObjectId(game_id)})
+@app.route ('/show_review/<game_name>')
+def show_review(game_name):
+    game_review = mongo.db.games.find_one({"game_name":game_name})
     return render_template('game_page.html',game = game_review)
 
 
-@app.route('/search/<query>', methods=["POST"])
-def search(query):
-    query = request.form.get('search_query')
-    text_results = mongo.db.games.command('game_name', search=query)
-    doc_matches = (res['obj'] for res in text_results['results'])
-    return render_template("search.html", results=results)
+@app.route('/search', methods=["GET"])
+def search():
+    query = request.args.get('search_query')
+    print(query)
+    myquery={"game_name":query}
+    doc_matches = mongo.db.games.find(myquery)
+    doc = {}
+    for game in doc_matches:
+        print(game["game_name"])
+        doc["game_name"]=game["game_name"]
+        doc["_id"]=game["_id"]
+        doc["rating"]=game["rating"]
+        
+
+    return render_template("search.html", doc_matches = doc)
 
 
 
