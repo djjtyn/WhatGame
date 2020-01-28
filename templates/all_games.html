@@ -2,7 +2,7 @@
 {% block content %}
 <h1>All Game Reviews</h1>
 <div class="row">
-<form action = "{{url_for('search_query', query = query)}}" method = "POST" class="col s12">
+<form action = "{{url_for('search', game_name=.game_name)}}" method = "POST" class="col s12">
     <div class="row">   
       <div class="input-field col s12">
         <i class="material-icons prefix">search</i>
