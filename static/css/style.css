@@ -92,6 +92,9 @@ footer {
     font-size: 
 }
 
+form label {
+    clear: both;
+}
 
 
 /*Index.html*/

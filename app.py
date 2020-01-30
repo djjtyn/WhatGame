@@ -18,6 +18,7 @@ mongo = PyMongo(app)
 @app.route('/')
 def all_games():
     return render_template ("all_games.html", games=list(mongo.db.games.find()))
+    
 
 @app.route('/top_rated')
 def top_rated():
@@ -88,7 +89,13 @@ def insert_platform():
 def show_review(game_id):
     game_review = mongo.db.games.find_one({"_id":ObjectId(game_id)})
     return render_template('game_page.html',game = game_review)
+    print(type(game.rating))
 
+@app.route('/search')
+def search():
+    query=request.args.get('search')
+    all=mongo.db.games.find_one({"game_name":query})
+    return render_template('search.html', all=all)
 
 
 if __name__ == '__main__':
