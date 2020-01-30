@@ -35,16 +35,16 @@
         <div class="input-field col s12">
           <i class="fas fa-tv prefix"></i>
           <select id="platform" name="platform">
-            <option value="" disabled selected>Choose Platform</option>
+            <option value="" disabled selected>{{game.platform}}</option>
             {% for platform in platforms %}
               {% if platform.platform_name == game.platform %}
-              <option value="{{platform.platform_name}}"selected>{{platform.platform_name}}</option>
+              <option value="{{platform.platform_name}}">{{game.platform}}</option>
               {% else %}
               <option value="{{platform.platform_name}}">{{platform.platform_name}}</option>
               {%endif%}
             {% endfor %}
           </select>
-          <label>Choose Platform</label>
+          <label>Platform Used</label>
         </div>
      </div><!--platform-->
      <div class="row">
@@ -91,7 +91,7 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">add_photo_alternate</i>
-          <input name = "image" id="image" type="text" class="validate" value = "{{game.image}}">
+          <input name = "image" id="image" type="text" class="validate" value = "{{game.image}}" required>
           <label for="image">Game Screenshot(Confused? Use Google Images to find an image)</label>
         </div>
       </div>
