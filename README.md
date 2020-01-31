@@ -24,8 +24,8 @@ As a user I dont have time to read a full review of the videogame�
 the game on the main games page without needing to read the full review.
 As a user, I only want to find out about the top ten rated games on the website. I can click the 'Top Rated' option in the
 navigation bar which will take me to a page which only contains the top ten highest rated games on the website.
-#Wireframes
-## Desktop
+# Wireframes
+## Desktop
 ### Home Page
 ![image](static/img/wireframes/home_page_desktop.png)
 ### Top Rated Page
@@ -33,7 +33,7 @@ navigation bar which will take me to a page which only contains the�
 ### Add a Review Page
 ![image](static/img/wireframes/add_review_desktop.png)
 ### Review Added Confirmation
-![image](static/img/wireframes/review_added_confirmation_mobile.png
+![image](static/img/wireframes/review_added_confirmation_mobile.png)
 ### Add a Platform Page
 ![image](static/img/wireframes/add_platform_desktop.png)
 ### Platform Added Confirmation
