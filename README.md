@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-README MILESTONE 3
 # Overview
 For my third milestone project I have chose to do a videogame review website. On this website one can view reviews, add review,
 add gaming platforms and also delete reviews. At the moment anybody using the site can delete reviews but at a later stage 
