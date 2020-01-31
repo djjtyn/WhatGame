@@ -90,6 +90,10 @@ In both the View all Games and Top Rated pages each game listing contains a rati
 I plan to add a search bar to the page containing all of the games. This will be to alleviate the need of scrolling down through every game listing to see if there is a desired one there. Instead, a user could just search for the game in the search bar which will then load it's games listing if available or prompt the user that there is no such game review available if its not contained within the sites collection.
 ### Comments Section
 Another feature still left to implement is a comment section to have on each game review page. This will allow users to post comments and reply to comment already left on the page to further increase the interactivity between a user and the site.
+### Admin Features
+A feature left to implement for this project is Admin only features. These will ensure that only an admin is able to delete a review. As of this moment, any user using the site can freely delete reviews.
+### Login
+A feature left to implement for this project is allowing users having to log in to edit a review. This is so that when editing a review, the identity of the person changing the review is revealed so as to stop people adding edits that dont relate to the review.
 # Technologies Used
 * HTML: This project uses HTML to provide the structure of the page.
 * CSS:This project uses CSS to provide styling for the HTML.
