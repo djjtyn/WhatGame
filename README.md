@@ -33,7 +33,7 @@ navigation bar which will take me to a page which only contains the�
 ### Add a Review Page
 ![image](static/img/wireframes/add_review_desktop.png)
 ### Review Added Confirmation
-![image](static/img/wireframes/review_added_confirmation_mobile.png)
+![image](static/img/wireframes/review_added_desktop.png)
 ### Add a Platform Page
 ![image](static/img/wireframes/add_platform_desktop.png)
 ### Platform Added Confirmation
@@ -43,5 +43,24 @@ navigation bar which will take me to a page which only contains the�
 ### Edit Review Confirmation
 ![image](static/img/wireframes/edit_confirmation_desktop.png)
 ### Game Page
-![image](static/img/wireframes/home_page_desktop.png)
+![image](static/img/wireframes/game_page_desktop.png)
+## Mobile
+### Home Page
+![image](static/img/wireframes/home_page_mobile.png)
+### Top Rated Page
+![image](static/img/wireframes/top_rated_mobile.png)
+### Add a Review Page
+![image](static/img/wireframes/add_review_mobile.png)
+### Review Added Confirmation
+![image](static/img/wireframes/review_added_confirmation_mobile.png)
+### Add a Platform Page
+![image](static/img/wireframes/add_platform_mobile.png)
+### Platform Added Confirmation
+![image](static/img/wireframes/platform_added_mobile.png)
+### Edit Review Page
+![image](static/img/wireframes/edit_review_mobile.png)
+### Edit Review Confirmation
+![image](static/img/wireframes/edit_confirmation_mobile.png)
+### Game Page
+![image](static/img/wireframes/game_page_mobile.png)
 
