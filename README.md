@@ -1,14 +1,14 @@
-# Overview
+# Overview
 For my third milestone project I have chose to do a videogame review website. On this website one can view reviews, add review,
 add gaming platforms and also delete reviews. At the moment anybody using the site can delete reviews but at a later stage 
 this would be changed to allow only admins of the site to delete reviews. There is a 'Top Rated' option in the navigation bar
 which, upon clicked, will show to user the ten most top rated games within the game reviews collection.
-# Website URL
-# UX
+# Website URL
+# UX
 This website is designed for fans of videogames. It is designed to allow videogame users to choose their next videogame to play
 by showing reviews left by other videogame fans. If a videogame player has an opinion on a particular game which they have played,
 they can choose to review the videogame which is posted to the site. 
-## User Stories
+## User Stories
 As a user I have finished playing my most recent computer game and am interested in finding a new game to play. I can use this
 website to find suggestions for which games to play and which games to avoid to help me make my next choice of game to play.
 As a user I have just finished playing a computer game which I thought was very good. I want more people to be aware of how
@@ -62,5 +62,5 @@ navigation bar which will take me to a page which only contains the�
 ### Edit Review Confirmation
 ![image](static/img/wireframes/edit_confirmation_mobile.png)
 ### Game Page
-![image](static/img/wireframes/game_page_mobile.png)
+![image](static/img/wireframes/geme_page_mobile.png)
 
