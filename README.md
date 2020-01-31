@@ -71,9 +71,32 @@ All of the form input areas have icons beside them which are there to add a bit 
 Each games review page has it's own unique url using the id number given to it via mongo db. I chose to do it this way as I thought it would look better than having all the game reviews on the one page. 
 On the desktop version of a game review the games name is the main heading on the page. Below this is a screenshot of the game with some additional information such rating, publisher, release date, genre, platform, local multiplayer information on the game parralel to the image. Below the image and the additional information section is the overview of the game. I chose this layout because I thought it was the best way to lay out each bit of information the site has on the game after a review is left.
 For the mobile version of a game review the games name is the main heading on the page. Centred directly below this is a screenshot of the game. Tne additional information section of the game is below the image and the games overview is under the additional information section. I chose this layout because I thought it looked good for a mobile device.
+The game review has a background colour that is different to that of the background for the main page. I chose to add a black coloured background with a low opacity etting for this as I thought it looked good and created a clear area for the game reviews contents to sit inside.
 When a user leaves a review of a game, they are brought to a page showing a thank you message for leaving the review. There is a button on this page which ,when selected, leads the user back to the homepage where they can then see their review newly listed at the bottom of the game listings.
 When a user adds a new platform they are brought to a page showing a thank you message for adding the platform. There is a button on this page which when selected leads the user back to the sites home page. When the user goes to add a review they will see the platform that they added listed in the Platform dropdown section of the form.
 When a user edits a review they are brought to a page showing a thank you message for their edit. There is a button on this page which when clicked, leads the user back to the review page for the game they chose to edit the review for which they can then see their changes that they made to the review.
 # Features
+## Existing Fetures
+### Navigation Bar
+The Navigation bar has four different options available for a user to choose from- 'View all Games', 'Top Rated', Add a Review' and 'Add a Platform'. 
+The View all Games option in the navigation bar is the home page for the site. This will list every game review which the site has on it. 
+The Top Rated option in the navigation bar will lead to a page much like the View all Games page. The difference between these two pages is that rather than listing all the reviews for every game on the site the Top Rated page only shows ten of the highest rated games on the website to allow the user to see what is highlt rated very quickly.
+The add a review optiion in the navigation bar will lead the user to a form which allows them to fill out fields about a particular game to leave a review for said game.
+The add a platform option in the navigation bar will lead the user to a page which they can add a gaming platform to the list of options available for the platform choices in the add a review form. Once this new entry is added via the add platform form, this option will now be availeable to the user to select from the add game review form.
+### Short Reviews
+In both the View all Games and Top Rated pages each game listing contains a rating for them as well as the game name. This rating is on this page to allow a user to quickly see what the game rating is without having to click into the games page and check there. In each Game listing there is a button for viewing the full review which upon clicking will lead the user to a page which has a review of the game which they clicked the button for. 
+## Features Left to Implement
+### Search Bar
+I plan to add a search bar to the page containing all of the games. This will be to alleviate the need of scrolling down through every game listing to see if there is a desired one there. Instead, a user could just search for the game in the search bar which will then load it's games listing if available or prompt the user that there is no such game review available if its not contained within the sites collection.
+### Comments Section
+Another feature still left to implement is a comment section to have on each game review page. This will allow users to post comments and reply to comment already left on the page to further increase the interactivity between a user and the site.
+# Technologies Used
+* HTML: This project uses HTML to provide the structure of the page.
+* CSS:This project uses CSS to provide styling for the HTML.
+* Bootstrap: I have used bootstrap in this project to help provide further structure to the page and aid the responsive design aspect of the site.
+* Materialize: I have used Materialize in this project for the navigation bar, some font icons and to aid the responsive design aspect of the site.
+* FontAwsome: I have made use of FontAwesome to attain some of the icons used for the project.
+* Python3: I have used Python in this site for rendering html templates and redirecting to various urls 
+
 
 
