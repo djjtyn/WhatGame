@@ -96,7 +96,11 @@ Another feature still left to implement is a comment section to have on each gam
 * Bootstrap: I have used bootstrap in this project to help provide further structure to the page and aid the responsive design aspect of the site.
 * Materialize: I have used Materialize in this project for the navigation bar, some font icons and to aid the responsive design aspect of the site.
 * FontAwsome: I have made use of FontAwesome to attain some of the icons used for the project.
-* Python3: I have used Python in this site for rendering html templates and redirecting to various urls 
+* Python3: I have used Python a lot for this project.Python is used to redirect users to particular pages when forms are submitted or buttons are clicked making use of views and functions coded with Python. When a form is submitted, I have used Python to allow changes be made to a Mongodb database I have created for the site which contains details on reviews, platforms and ratings. I have linked this mongoDb database to the project using Python. 
+I have created local environment variables using python
+* Heroku: This project has been deployed to Heroku
+# Testing
+
 
 
 
