@@ -5,7 +5,7 @@
  }/*background image for all pages*/
 
  * {
-     font-family: arial;
+     font-family: Arial,sans-serif;
  }/*Font family for all text-arial*/
 
  .nav-wrapper ul li a {
@@ -42,39 +42,33 @@ footer {
 /*all_games HTML*/
 .all-games-summary {
     background-color:black;
-    height: 130px;
+    height: 100%;
+    width: 100%;
     color: white;
     font-size: 18px;
     padding: 5px;
     border: 1px solid white;
+    display: flex;
 }/*sets the bg color,font color, font size and border for the list elements children. */
 
 .all-games-summary a {
    line-height: 20px;
    color: lime;
-   margin-left: 15px;
-   height: 100
-}
-
-.all-games-summary a {
-    height: 100%;
-}
+   margin: 15px 15px;
+   padding: 5px;
+   height: 100%;
+   display: inline-block;
+}/*Button for viewing full review-colour,margins,padding,height and line height*/
 
 .all-games-summary i {
     font-size: 35px;
     padding: 5px;
-}
+}/*Icon inside button for viewing full review-size and padding*/
 
-.all-games-summary .name_and_rating {
-    margin: 15px;
-    padding: 10px;
-    float: right;
-} /*Margin and padding for unordered list text elements*/
-
-.all_games_list li {
-    padding: 10px;
-    margin: 15px;
-} /*Border, padding and margin for ul elements li children*/
+.name_and_rating {
+    margin: 15px 15px;
+    display: inline-block;
+}/*Game title and Rating area-margins and letter spacing*/
 
 .buttons {
     display: flex;
