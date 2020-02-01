@@ -106,6 +106,7 @@ I have created local environment variables using python
 # Testing
 HTML Validation was done using the validator found at "https://validator.w3.org/". This validation test only returned errors
 corresponding to the Jinja 2 statements and expressions. All of the HTML code texted fine.
+Python validator found at https://extendsclass.com/python-tester.html
 
 
 

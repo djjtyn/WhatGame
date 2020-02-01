@@ -50,10 +50,10 @@ footer {
 }/*sets the bg color,font color, font size and border for the list elements children. */
 
 .all-games-summary a {
-   text-align: center;
    line-height: 20px;
    color: lime;
    margin-left: 15px;
+   height: 100
 }
 
 .all-games-summary a {
@@ -68,7 +68,7 @@ footer {
 .all-games-summary .name_and_rating {
     margin: 15px;
     padding: 10px;
-    float: left;;
+    float: right;
 } /*Margin and padding for unordered list text elements*/
 
 .all_games_list li {
@@ -113,6 +113,7 @@ form label {
      margin-left: 40%;
      margin-right: 40%;
      line-height: 24px;
+     clear: both;
 }/* font color,border,text aligning and button positioning for buttons*/
 
 .center-button i {

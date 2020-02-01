@@ -63,7 +63,7 @@ def update_review(game_id):
      'genre': request.form.get('genre'),
      'platform': request.form.get('platform'),
      'multiplayer': request.form.get('multiplayer'),
-     'rating': request.form.get('rating'),
+     'rating': int(request.form.get('rating')),
      'description': request.form.get('description'),
      'image':request.form.get('image')
     })
@@ -89,8 +89,7 @@ def insert_platform():
 def show_review(game_id):
     game_review = mongo.db.games.find_one({"_id":ObjectId(game_id)})
     return render_template('game_page.html',game = game_review)
-    print(type(game.rating))
-
+    
 @app.route('/search')
 def search():
     query=request.args.get('search')
