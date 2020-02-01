@@ -104,6 +104,8 @@ A feature left to implement for this project is allowing users having to log in 
 I have created local environment variables using python
 * Heroku: This project has been deployed to Heroku
 # Testing
+HTML Validation was done using the validator found at "https://validator.w3.org/". This validation test only returned errors
+corresponding to the Jinja 2 statements and expressions. All of the HTML code texted fine.
 
 
 

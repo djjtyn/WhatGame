@@ -1,10 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>All Game Reviews</h1>
-<form action="{{url_for('search')}}" method="GET" class="col-sm-4">
-<label for="search">Enter Search Query</label>
-<input type="text" name="search" id="search">
-</form>
 <div class="row">
   <div class="col s12">
     <ul>
@@ -12,7 +8,7 @@
       <li>
         <div class="all-games-summary">
           <div class="row">
-            <a href="{{url_for('show_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn">
+            <a href="{{url_for('show_review', game_id=game._id)}}" class="waves-effect waves-light btn game-btn">
               <i class="material-icons">remove_red_eye</i>
               <br>
               View Full Review
@@ -27,6 +23,4 @@
     </ul>
   </div>
 </div>
-
-
 {% endblock %}

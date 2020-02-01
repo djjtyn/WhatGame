@@ -26,7 +26,7 @@
         </div><!--Game Release Date-->
         <div class="genre">
           <i class="far fa-question-circle"></i>
-          <strong>Genre:</strong> {{game.genre}}</h6>
+          <strong>Genre:</strong> {{game.genre}}
         </div><!--Game Genre-->
         <div class="platform">
           <i class="fas fa-tv"></i>
@@ -47,20 +47,15 @@
   </div><!--Game Description Area-->
   <div class="row">
     <div class="buttons">
-      <a href="{{url_for('edit_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn">
+      <a href="{{url_for('edit_review', game_id=game._id)}}" class="waves-effect waves-light btn game-btn">
         <i class="material-icons">edit</i>
         Edit 
       </a><!--Edit Review Button-->  
-      <a href="{{url_for('delete_review', game_id=game._id)}}"class="waves-effect waves-light btn game-btn ">
+      <a href="{{url_for('delete_review', game_id=game._id)}}" class="waves-effect waves-light btn game-btn ">
         <i class="material-icons">delete</i>
         Delete 
       </a><!--Delete Review Button--> 
     </div>
   </div><!--Edit and Delete Review Buttons-->
-  <div class="comment-area">
-    <form action="">
-      <textarea name="comment_area" id="" cols="30" rows="10"></textarea>
-    </form>
-  </div>
 </div>
 {% endblock %}

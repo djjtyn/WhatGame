@@ -2,106 +2,103 @@
 {% block content %}
 <h1>Edit Review</h1>
 <div class="row">
-    <form action = "{{url_for('update_review', game_id=game._id)}}" method = "POST" class="col s12">
-      <div class="row">   
-        <div class="input-field col s12">
-          <i class="material-icons prefix">videogame_asset</i>
-          <input name = "game_name" id="game_name" type="text" class="validate" value="{{game.game_name}}">
-          <label for="game_name">Title of Game</label>
-        </div>
-      </div><!--game_name-->
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="fa fa-cogs prefix" aria-hidden="true"></i>
-          <input id="publisher" name="publisher" type="text" class="validate" value="{{game.publisher}}">
-          <label for="publisher">Developer(s)</label>
-        </div>
-      </div><!--publisher-->
-      <div class="row">
-        <div class="input-field col s12" id="calender">
-          <i class="material-icons prefix">today</i>
-          <input id="release" name="release" type="text" class="datepicker" value="{{game.release}}">
-          <label for="release">Release Date</label>
-        </div>
-      </div><!--release-->
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="far fa-question-circle prefix"></i>
-          <input id="genre" name="genre" type="text" class="validate" value="{{game.genre}}">
-          <label for="genre">Genre</label>
-        </div>
-      </div> <!--genre-->
-      <div class="row" id="list">
-        <div class="input-field col s12">
-          <i class="fas fa-tv prefix"></i>
-          <select id="platform" name="platform">
-            <option value="" disabled selected>{{game.platform}}</option>
-            {% for platform in platforms %}
-              {% if platform.platform_name == game.platform %}
-              <option value="{{platform.platform_name}}">{{game.platform}}</option>
-              {% else %}
-              <option value="{{platform.platform_name}}">{{platform.platform_name}}</option>
-              {%endif%}
-            {% endfor %}
-          </select>
-          <label>Platform Used</label>
-        </div>
-     </div><!--platform-->
-     <div class="row">
-       <div class="input-field col s12" id="multiplayer">
-         <i class="fas fa-gamepad prefix"></i>
-           <select id="multiplayer" name="multiplayer">
-             <option value="" disabled selected>Select One</option>
-             {% if game.multiplayer == "Yes" %}
-             <option value="Yes" selected>Yes</option>
-             <option value="No">No</option>
-             {% else %}
-             <option value="Yes">Yes</option>
-             <option value="No"selected>No</option>
-             {% endif %}
-           </select>
-           <label>Local Multiplayer?</label>
-       </div>
-     </div><!--multiplayer-->
-     <div class="row" id="list">>
-       <div class="input-field col s12">
-         <i class="far fa-star prefix"></i>
-         <select id="rating" name="rating">
-           <option value="" disabled selected>Rating</option>
-           {% for rate in ratings %}
-             {% if rate.rating == game.rating %}
-             <option value="{{rate.rating}}" selected>{{game.rating}}</option>
-             {% else %}
-             <option value="{{rate.rating}}">{{rate.rating}}</option>
-             {% endif %}
-           {% endfor %}
-          </select>
-          <label>Game Rating</label>
-        </div>
-      </div><!--rating-->
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">create</i>
-          <textarea name="description" id="description" class="materialize-textarea">
-            {{game.description}}
-          </textarea>
-          <label for="description">Game Description</label>
-        </div>
-      </div><!--description-->
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">add_photo_alternate</i>
-          <input name = "image" id="image" type="text" class="validate" value = "{{game.image}}" required>
-          <label for="image">Game Screenshot URL</label>
-        </div>
+  <form action = "{{url_for('update_review', game_id=game._id)}}" method = "POST" class="col s12">
+    <div class="row">   
+      <div class="input-field col s12">
+        <i class="material-icons prefix">videogame_asset</i>
+        <input name = "game_name" id="game_name" type="text" class="validate" value="{{game.game_name}}">
+        <label for="game_name">Title of Game</label>
       </div>
-      <div class="row">
-        <button class="btn waves-effect waves-light center-button" type="submit" name="action">Edit Review
-          <i class="material-icons right">edit</i>
-        </button>
-      </div><!--button-->
-    </form>
-  </div>
-  </div>
-  </div>
+    </div><!--game_name-->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fa fa-cogs prefix" aria-hidden="true"></i>
+        <input id="publisher" name="publisher" type="text" class="validate" value="{{game.publisher}}">
+        <label for="publisher">Developer(s)</label>
+      </div>
+    </div><!--publisher-->
+    <div class="row">
+      <div class="input-field col s12" id="calender">
+        <i class="material-icons prefix">today</i>
+        <input id="release" name="release" type="text" class="datepicker" value="{{game.release}}">
+        <label for="release">Release Date</label>
+      </div>
+    </div><!--release-->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="far fa-question-circle prefix"></i>
+        <input id="genre" name="genre" type="text" class="validate" value="{{game.genre}}">
+        <label for="genre">Genre</label>
+      </div>
+    </div> <!--genre-->
+    <div class="row" id="list">
+      <div class="input-field col s12">
+        <i class="fas fa-tv prefix"></i>
+        <select id="platform" name="platform">
+          <option value="" disabled selected>{{game.platform}}</option>
+          {% for platform in platforms %}
+          {% if platform.platform_name == game.platform %}
+          <option value="{{platform.platform_name}}">{{game.platform}}</option>
+          {% else %}
+          <option value="{{platform.platform_name}}">{{platform.platform_name}}</option>
+          {%endif%}
+          {% endfor %}
+        </select>
+        <label>Platform Used</label>
+      </div>
+    </div><!--platform-->
+    <div class="row">
+      <div class="input-field col s12" id="multiplayer-list">
+        <i class="fas fa-gamepad prefix"></i>
+        <select id="multiplayer" name="multiplayer">
+          <option value="" disabled>Select One</option>
+          {% if game.multiplayer == "Yes" %}
+          <option value="Yes" selected>Yes</option>
+          <option value="No">No</option>
+          {% else %}
+          <option value="Yes">Yes</option>
+          <option value="No" selected>No</option>
+          {% endif %}
+        </select>
+        <label>Local Multiplayer?</label>
+      </div>
+    </div><!--multiplayer-->
+    <div class="row" id="rate-list">>
+      <div class="input-field col s12">
+        <i class="far fa-star prefix"></i>
+        <select id="rating" name="rating">
+          <option value="" disabled selected>Rating</option>
+          {% for rate in ratings %}
+          {% if rate.rating == game.rating %}
+          <option value="{{rate.rating}}" selected>{{game.rating}}</option>
+          {% else %}
+          <option value="{{rate.rating}}">{{rate.rating}}</option>
+          {% endif %}
+          {% endfor %}
+        </select>
+        <label>Game Rating</label>
+      </div>
+    </div><!--rating-->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">create</i>
+        <textarea name="description" id="description" class="materialize-textarea">
+        {{game.description}}
+        </textarea>
+        <label for="description">Game Description</label>
+      </div>
+    </div><!--description-->
+    <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">add_photo_alternate</i>
+      <input name = "image" id="image" type="text" class="validate" value = "{{game.image}}" required>
+      <label for="image">Game Screenshot URL</label>
+    </div>
+    <div class="row">
+      <button class="btn waves-effect waves-light center-button" type="submit" name="action">Edit Review
+        <i class="material-icons right">edit</i>
+      </button>
+    </div><!--button-->
+  </form>
+</div>
 {% endblock %}

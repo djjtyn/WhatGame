@@ -12,69 +12,66 @@
 	<link rel="stylesheet" href="{{url_for('static',filename='css/style.css' )}}">
   </head>
   <body>
-  <div class="wrapper">
-    <header>
-	  <nav>
-	    <div class="nav-wrapper black">
-		  <a href="{{url_for('all_games')}}" class="brand-logo">WhatGame?</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-	  	  <ul id="nav-mobile" class="right hide-on-med-and-down">
-		    <li><a href="{{url_for('all_games')}}">View All Reviews</a></li>
-            <li><a href="{{url_for('top_rated')}}">Top Rated</a></li>
-			<li><a href="{{url_for('add_review')}}">Add a Review</a></li>
-			<li><a href="{{url_for('show_platform_form')}}">Add a Platform</a></li>
-		  </ul>
-          <ul class="side-nav black" id="mobile-demo">
-            <li><a href="{{url_for('view_games')}}">View All Reviews</a></li>
-            <li><a href="{{url_for('top_rated')}}">Top Rated</a></li>
-            <li><a href="{{url_for('add_review')}}">Add a Review</a></li>
-            <li><a href="{{url_for('show_platform_form')}}">Add a Platform</a></li>                
-          </ul>
-		</div>
-	  </nav>
-	</header><!--Navigation Bar-->
-    <div class="container">
+    <div class="wrapper">
+      <header>
+	    <nav>
+	      <div class="nav-wrapper black">
+		    <a href="{{url_for('all_games')}}" class="brand-logo">WhatGame?</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+	  	    <ul id="nav-mobile" class="right hide-on-med-and-down">
+		      <li><a href="{{url_for('all_games')}}">View All Reviews</a></li>
+              <li><a href="{{url_for('top_rated')}}">Top Rated</a></li>
+			  <li><a href="{{url_for('add_review')}}">Add a Review</a></li>
+			  <li><a href="{{url_for('show_platform_form')}}">Add a Platform</a></li>
+		    </ul><!--Navigation bar for medium and large screen sizes-->
+            <ul class="side-nav black" id="mobile-demo">
+              <li><a href="{{url_for('all_games')}}">View All Reviews</a></li>
+              <li><a href="{{url_for('top_rated')}}">Top Rated</a></li>
+              <li><a href="{{url_for('add_review')}}">Add a Review</a></li>
+              <li><a href="{{url_for('show_platform_form')}}">Add a Platform</a></li>                
+            </ul><!--Navigation bar for small and mobile screen sizes-->
+		  </div>
+	    </nav>
+	  </header><!--Navigation Bar-->
+      <div class="container">
 	  {% block content %}
 	  {% endblock %}
-    </div>
-  </div><!--Wrapper around Header and Body-->
+    </div><!--Block Content-->
+    </div><!--Wrapper around Header and Body-->
     <footer>
       © David Tynan 2020
     </footer><!--Copyright Footer-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-	<script type="text/javascript">
+	<script>
 	  $(document).ready(function() {
         $('select').material_select();
         $(".button-collapse").sideNav();//Allows the menu to show on side when menu icon is selected on smaller screens
-             document.getElementById("calender").addEventListener("click", function(e) {
-	    e.stopPropagation();
-      });//Allows calender to stay on screen when release date is selected in form
+        document.getElementById("calender").addEventListener("click", function(e) {
+	      e.stopPropagation();
+        });//Allows calender to stay on screen when release date is selected in form
 
-      document.getElementById("multiplayer").addEventListener("click", function(e) {
-	    e.stopPropagation();
-      });//Allows local multiplayer options to stay on screen when local multiplayer is selected in form
+        document.getElementById("multiplayer-list").addEventListener("click", function(e) {
+	      e.stopPropagation();
+        });//Allows local multiplayer options to stay on screen when local multiplayer is selected in form
 
-      document.getElementById("list").addEventListener("click", function(e) {
-	    e.stopPropagation();
-      });//Allows platform options to stay on screen when platform is selected in form
+        document.getElementById("list").addEventListener("click", function(e) {
+	      e.stopPropagation();
+        });//Allows platform options to stay on screen when platform is selected in form
 
-      document.getElementById("rate-list").addEventListener("click", function(e) {
-	    e.stopPropagation();
-      });//Allows local rating options to stay on screen when rating is selected in form
-       $('.datepicker').pickadate({
-        selectMonths: true, 
-        selectYears: 15, 
-        today: 'Today',
-        clear: 'Clear',
-        close: 'Ok',
-        closeOnSelect: false 
-      });//Shows calender when release date is selected in form
+        document.getElementById("rate-list").addEventListener("click", function(e) {
+	      e.stopPropagation();
+        });//Allows local rating options to stay on screen when rating is selected in form
+
+        $('.datepicker').pickadate({
+          selectMonths: true, 
+          selectYears: 15, 
+          today: 'Today',
+          clear: 'Clear',
+          close: 'Ok',
+          closeOnSelect: false 
+        });//Shows calender when release date is selected in form
       });
-
-     
-    
- 
     </script>
   </body>
 </html>
