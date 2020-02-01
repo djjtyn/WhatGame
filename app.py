@@ -36,8 +36,19 @@ def add_review():
 @app.route('/review_added', methods=["POST"])
 def review_added():
     games = mongo.db.games
-    games.insert_one(request.form.to_dict())
+    games.insert_one(
+    {'game_name': request.form.get('game_name'),
+     'publisher': request.form.get('publisher'),
+     'release': request.form.get('release'),
+     'genre': request.form.get('genre'),
+     'platform': request.form.get('platform'),
+     'multiplayer': request.form.get('multiplayer'),
+     'rating': int(request.form.get('rating')),
+     'description': request.form.get('description'),
+     'image':request.form.get('image')
+    })
     return redirect(url_for('add_confirmation'))
+#Code Above deals with form when initial game review is submitted and returns a confirmation for the review being added
 
 @app.route('/add_confirmation')
 def add_confirmation():
