@@ -3,9 +3,15 @@
 <h1>All Game Reviews</h1>
 <div class="row">
   <div class="col s12">
+  <form action = "{{url_for('search')}}" method = "GET" class="col s12">
+    <div class="row">   
+      <div class="input-field col s12">
+        <i class="material-icons prefix">videogame_asset</i>
+        <input name = "search" id="search" type="text" class="validate" required>
     <ul>
       {% for game in games %}
       <li>
+     
         <div class="all-games-summary">
           <div class="row">
           <div class="col s12 m6">
@@ -20,6 +26,7 @@
             </div><!--Game Name & Rating-->
           </div>
         </div>
+      
         <!--View game button and game name and rating section-->
       </li>
       {% endfor %}

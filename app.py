@@ -3,8 +3,11 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
+from json import dumps
+
 if path.exists("env.py"):
   import env 
+
 
 
 app = Flask(__name__)
@@ -102,11 +105,14 @@ def show_review(game_id):
     return render_template('game_page.html',game = game_review)
 #Code above allows each game review to have it's own individual URL using the document's id key
 
-@app.route('/search')
+@app.route('/search', methods=["GET"])
 def search():
     query=request.args.get('search')
-    all=mongo.db.games.find_one({"game_name":query})
-    return render_template('search.html', all=all)
+    print(query)
+    game=mongo.db.games.find_one({"game_name":query})
+    return render_template("search.html", game = game)
+
+ #   return render_template('search.html', all=all)
 #Code above is an attempt at enabling a search function for the game collection database. This is still a work in progress
 
 if __name__ == '__main__':

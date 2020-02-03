@@ -4,12 +4,12 @@
 <div class="row">
   <div class="col s12">
     <ul>
-   {% for game in all %}
+
       <li>
         <div class="all-games-summary">
           <div class="row">
             <div class="center_icon_and_text">
-              <a href="{{url_for('show_review', game_name=game.game_name)}}" class="waves-effect waves-light btn game-btn">
+              <a href={{url_for('show_review', game_id=game._id)}} class="waves-effect waves-light btn game-btn">
                 <i class="material-icons">remove_red_eye</i>
                 <br>
                 View Full Review
@@ -21,7 +21,7 @@
           </div>
         </div>
       </li>
-{%endfor%}
+
     </ul>
   </div>
   </div>

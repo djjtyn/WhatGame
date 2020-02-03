@@ -58,8 +58,8 @@
     <div class="row" id="rate-list">
       <div class="input-field col s12">
         <i class="far fa-star prefix"></i>
-        <select id="rating" name="rating">
-          <option value="" disabled selected>Rating</option>
+        <select id="rating" name="rating" required>
+          <option value="" disabled selected>Rating(Required)</option>
           {% for rate in ratings %}
           <option value="{{rate.rating}}">{{rate.rating}}</option>
           {% endfor %}
