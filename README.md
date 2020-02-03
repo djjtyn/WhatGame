@@ -1,3 +1,5 @@
+This is a work in progress but the deployed version of the site so far (03/02/20) can be found on Heroku here: https://ms3whatgame.herokuapp.com/
+
 # Overview
 For my third milestone project I have chosen to create a videogame review website called WhatGame?.On this website people can view,add,edit and delete videogame reviews. People can also add gaming platforms which get logged to a database which can be used for reviews for future game reviews. There is a 'Top Rated' option in the navigation bar
 which, upon clicked, will show the user the ten top most rated games within the site's game reviews collection.
