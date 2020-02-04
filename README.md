@@ -2,11 +2,13 @@ This is a work in progress but the deployed version of the site so far (03/02/20
 
 # Overview
 For my third milestone project I have chosen to create a videogame review website called WhatGame?.On this website people can view,add,edit and delete videogame reviews. People can also add gaming platforms which get logged to a database which can be used for reviews for future game reviews. There is a 'Top Rated' option in the navigation bar
-which, upon clicked, will show the user the ten top most rated games within the site's game reviews collection.
+which, upon clicked, will show the user the ten top most rated games within the site's game reviews collection. This site has full
+CRUD functionality for game reviews.
 # Website URL
 # UX
-This website is designed for fans of videogames. It is designed to influence videogame users to choose their next videogame
-to play by showing game reviews left by other videogame fans. If a videogame player has an opninion on a particular game which they have played, they can choose to post a review of the videogame on the website. 
+This website is designed for fans of videogames. It is designed to help videogame players choose their next videogame
+to play, or avoid, by showing game reviews left by other videogame players. If a videogame player has an opninion on a 
+particular game which they have played, they can choose to post a review of the videogame on the website. 
 ## User Stories
 As a user I have finished playing my most recent computer game and am interested in finding a new game to play. I can use this website to find suggestions for which games to play and which games to avoid to help me make my next choice of game to 
 play.

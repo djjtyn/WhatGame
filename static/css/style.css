@@ -5,33 +5,25 @@
  }/*background image for all pages*/
 
  * {
-     font-family: Arial,sans-serif;
- }/*Font family for all text-arial*/
+     font-family: Arial,"sans-serif";
+ }/*Font family for all text:Arial, fallback:sans-serif*/
 
  .nav-wrapper ul li a {
      padding: 10px;
      margin: 10px;
      line-height: 30px;
      font
- }/*padding,margin an line height stylings for the navbar options*/
+ }/*padding,margin and line height stylings for the navbars headings*/
 
  .nav-wrapper .brand-logo {
      padding: 10px;
      margin: 10px;
-     line-height: 30px;
+     line-height: 15px;
  }/*padding,margin an line height stylings for the navbar branding*/
 
- .submit {
-     height: 40px;
-     background-color: white;
-     line-height: 30px;
-     display: inline-block;
-     width: 
- }
-
- .search{
-     display: inline-block;
- }
+ #mobile-demo li a {
+    color: white;
+}/*Text colour for collapsed Navbar menu*/
 
  h1, h2 {
    padding-top: 10px;
@@ -52,13 +44,19 @@ footer {
      min-height: 100%;
  }/*Sets min height for everything in the body except the footer */
 
-/*all_games HTML*/
+ .center-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+} /*Centers content in the middle of page
+
+/*ALL_GAMES_HTML*/
 .all-games-summary {
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
     width: 100%;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px;
     border: 1px solid white;
     display: flex;
@@ -79,24 +77,16 @@ footer {
 }/*Icon inside button for viewing full review-size and padding*/
 
 .name_and_rating {
-    margin: 15px 15px;
+    margin: 15px 50px;
     display: inline-block;
 }/*Game title and Rating area-margins and letter spacing*/
-
-.center-section {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-} /*Centers the form confirmation pages
-
-
 
 /*Forms*/
 #review_form  {
      background-color:#696969;
      color: white;
-     border-radius: 2%;
- }/*add/edit review form bg color, font color and border radius for the add and edit review forms*/
+     border: 1px solid white;
+ }/*add/edit review and add platform forms bg color, font color and border*/
 
 #search_box {
    text-align: center;
@@ -107,20 +97,17 @@ footer {
    margin-bottom: 25px;
    margin-left: 40px;
    margin-right: 40px;
-}
+}/*Search Games data base forms*/
+
 #search_box input {
     text-align: center;
-    border-bottom: none;
-}
+}/*Search box input*/
 
-
-
-
-
-
+/*Buttons*/
 .center-button{
      color: white;
      border: 2px solid white;
+     background-color: black;
      border-radius: 25px;
      width: 20%;
      margin-left: 40%;
@@ -129,38 +116,26 @@ footer {
      clear: both;
 }/* font color,border,text aligning and button positioning for buttons*/
 
-.center-button i {
-    transform:translateY(-3px);
-    margin-left: 0;
-}
-
-.confirmation-button {
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-    border: 2px solid white;
+.game-btn {
+    width: 120px;
     border-radius: 25px;
+    border: 2px solid white;
     color: white;
-    background-color: black;
-    padding-bottom: 40px;
-}
+    margin: 5px;
+    text-align: center;
+} /*Buttons to show Full Game reviews*/
 
- /*Games.html*/
- .collapsible-header {
-     background-color: black;
-     color: white;
-     font-weight: 900;
- }
 
- .collapsible-body {
-      background-color: black;
-     color: white;
- }
 
- .collapsible-body .game_img {
-     border: 1px solid white;
-     margin-bottom: 10px;
- }
+
+
+
+
+
+
+
+
+ /
 
  .description {
      text-align: center;
@@ -171,18 +146,9 @@ footer {
     border: 1px solid white;
 }
 
-.game-btn {
-    width: 120px;
-    border-radius: 25px;
-    border: 2px solid white;
-    color: white;
-    margin: 5px;
-    text-align: center;
-} /*Buttons on games.html*/
 
-#mobile-demo li a {
-    color: white;
-}
+
+
 
 /*Game_page HTML*/
 .game_page_html {
