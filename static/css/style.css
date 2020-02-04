@@ -81,7 +81,7 @@ footer {
     width: 800px;
     margin: 15px 50px;
     display: inline-block;
-    text-align: center;
+    text-align: left;
 }/*Game title and Rating area-margins and letter spacing*/
 
 /*Forms*/
@@ -129,28 +129,6 @@ footer {
     background: black;
 } /*Buttons to show Full Game reviews and edit/delete buttons*/
 
-
-
-
-
-
-
-
-
-
-
- 
-
- .description {
-     text-align: center;
- }
-
-
-
-
-
-
-
 /*Game_page HTML*/
 .game_page_html {
     background-color: rgba(0, 0, 0, 0.5);
@@ -158,21 +136,20 @@ footer {
     padding: 15px;
     margin-top: 15px;
     color: white;
-}
+}/*Area around the game review content-bg color,border,padding and font color*/
 
 .game-name {
     font-size: 50px;
     text-align: center;
-}
+}/*Title of the game-font size and centred*/
 
 .game-page-image {
      width: 100%;
      height: 100%;
      border: 1px solid white;
- }
+ }/*Game screenshot image-width, height and border*/
 
 .game_text {
-    
     margin-top: 5px;
 }
 
