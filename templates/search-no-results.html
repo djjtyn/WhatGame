@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row center-section">
+  <div class="col s12">
+    <h1>No search Results for that Query</h1>
+    <h2>Try another search below</h2>
+   <form action = "{{url_for('search')}}" method = "GET" id="search_box">
+  <input type="text" name="search" id="search" placeholder="Search for Games">
+  <button class="btn waves-effect waves-light center-button" type="submit" name="action">
+    <i class="fas fa-search"></i>
+  </button>
+</form>
+  </div> 
+</div>
+{% endblock %}
