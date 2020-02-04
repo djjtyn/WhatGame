@@ -11,8 +11,8 @@
  .nav-wrapper ul li a {
      padding: 10px;
      margin: 10px;
-     line-height: 30px;
-     font
+     line-height: 25px;
+     
  }/*padding,margin and line height stylings for the navbars headings*/
 
  .nav-wrapper .brand-logo {
@@ -60,6 +60,7 @@ footer {
     padding: 5px;
     border: 1px solid white;
     display: flex;
+    vertical-align: top;
 }/*sets the bg color,font color, font size and border for the list elements children. */
 
 .all-games-summary a {
@@ -77,8 +78,10 @@ footer {
 }/*Icon inside button for viewing full review-size and padding*/
 
 .name_and_rating {
+    width: 800px;
     margin: 15px 50px;
     display: inline-block;
+    text-align: center;
 }/*Game title and Rating area-margins and letter spacing*/
 
 /*Forms*/
@@ -123,7 +126,8 @@ footer {
     color: white;
     margin: 5px;
     text-align: center;
-} /*Buttons to show Full Game reviews*/
+    background: black;
+} /*Buttons to show Full Game reviews and edit/delete buttons*/
 
 
 
@@ -135,16 +139,13 @@ footer {
 
 
 
- /
+ 
 
  .description {
      text-align: center;
  }
 
-.collapsible-body a {
-    color: white;
-    border: 1px solid white;
-}
+
 
 
 
@@ -161,7 +162,6 @@ footer {
 
 .game-name {
     font-size: 50px;
-   
     text-align: center;
 }
 
@@ -175,19 +175,6 @@ footer {
     
     margin-top: 5px;
 }
-
-.edit_review_button{
-    color: white;
-    text-align: center;
-    margin: 10px;
-}
-
-.edit_review_button a{
-    color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-}
-
 
 
 
