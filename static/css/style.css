@@ -59,8 +59,7 @@ footer {
     font-size: 16px;
     padding: 5px;
     border: 1px solid white;
-    display: flex;
-    vertical-align: top;
+    display: block;
 }/*sets the bg color,font color, font size and border for the list elements children. */
 
 .all-games-summary a {
@@ -81,7 +80,7 @@ footer {
     width: 800px;
     margin: 15px 50px;
     display: inline-block;
-    text-align: left;
+
 }/*Game title and Rating area-margins and letter spacing*/
 
 /*Forms*/
