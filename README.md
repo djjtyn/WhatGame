@@ -89,11 +89,18 @@ The add a review optiion in the navigation bar will lead the user to a form whic
 The add a platform option in the navigation bar will lead the user to a page which they can add a gaming platform to the list of options available for the platform choices in the add a review form. Once this new entry is added via the add platform form, this option will now be availeable to the user to select from the add game review form.
 ### Short Reviews
 In both the View all Games and Top Rated pages each game listing contains a rating for them as well as the game name. This rating is on this page to allow a user to quickly see what the game rating is without having to click into the games page and check there. In each Game listing there is a button for viewing the full review which upon clicking will lead the user to a page which has a review of the game which they clicked the button for. 
-## Features Left to Implement
+### CRUD Functionality
+Users can create, read, update and delete videogame reviews.
+To create a review the user selects 'Add a Review' from the navigation bar menu. They are then redirected to a form which upon completion will add all of the values they enter into the form to a database hosted on mongoDB.
+To read reviews, users can select either 'View All Reviews' or 'Top Rated' from the navigation bar menu. If 'View All Reviews' is selected, the user is redirected to a page which lists every review on the website. If 'Top Rated' is selected, the user is taken to a page which lists the top ten rated games on the site. For both of these pages, each game has a 'View Full Review' button accompanying the name and rating of each game which upon clicked will take the user to a page showing a full review of the game. Each games full review has an individual url which makes use of the games id key and value within the database.
+Users can update a review by selecting the edit button found on each games review page. This will then lead the user to a form which shows all the current values found within the game review which the user can change. Upon submission of this form, the new details will be shown on the games review page.
+Users can delete a review from the site by selecting the delete button found on each games review page. This will then remove the review from the site.
+Users can also add new platforms by clicking 'Add a Platform' from the navigation bar menu. They are then redirected to a page containing a form which they can type a platform name into. When this form is submitted, this new platform value is then added to the list of platforms found within the add review form's platform dropdown.  
 ### Search Bar
-I plan to add a search bar to the page containing all of the games. This will be to alleviate the need of scrolling down through every game listing to see if there is a desired one there. Instead, a user could just search for the game in the search bar which will then load it's games listing if available or prompt the user that there is no such game review available if its not contained within the sites collection.
+There is a searchbar on the page which contains the full list of games. This allows the user to search the site for a particular game rather than scrolling down the full list of games to find one they are looking for. If there is a match for the game name they type into the search bar, this match is presented to the user on a new page. If there is not a match, the user is presented a page which states tat there was no match for the search and prompts the user to try another search.
+## Features Left to Implement
 ### Comments Section
-Another feature still left to implement is a comment section to have on each game review page. This will allow users to post comments and reply to comment already left on the page to further increase the interactivity between a user and the site.
+A feature still left to implement is a comment section to have on each game review page. This will allow users to post comments and reply to comment already left on the page to further increase the interactivity between a user and the site.
 ### Admin Features
 A feature left to implement for this project is Admin only features. These will ensure that only an admin is able to delete a review. As of this moment, any user using the site can freely delete reviews.
 ### Login
@@ -104,13 +111,34 @@ A feature left to implement for this project is allowing users having to log in 
 * Bootstrap: I have used bootstrap in this project to help provide further structure to the page and aid the responsive design aspect of the site.
 * Materialize: I have used Materialize in this project for the navigation bar, some font icons and to aid the responsive design aspect of the site.
 * FontAwsome: I have made use of FontAwesome to attain some of the icons used for the project.
+* JQuery: I have made use of jQuery in this project. I have used this for the coding of the calender which is shown when the user selects the release date field from the add review form. I have also used it for the coding of the options available for the platform, multiplarer and rating options found within the add review form to ensure the options stay on screen onvce the user clicks on the drop down menu.
+JQuery is also used to simplify DOM manipulation.
 * Python3: I have used Python a lot for this project.Python is used to redirect users to particular pages when forms are submitted or buttons are clicked making use of views and functions coded with Python. When a form is submitted, I have used Python to allow changes be made to a Mongodb database I have created for the site which contains details on reviews, platforms and ratings. I have linked this mongoDb database to the project using Python. 
 I have created local environment variables using python
+* Mongo DB. The databases which are used throughout the project are all stored on Mongo.DB
 * Heroku: This project has been deployed to Heroku
 # Testing
+## Code Validation
 HTML Validation was done using the validator found at "https://validator.w3.org/". This validation test only returned errors
 corresponding to the Jinja 2 statements and expressions. All of the HTML code texted fine.
-Python validator found at https://extendsclass.com/python-tester.html
+CSS Validation was done using the validator found at "https://jigsaw.w3.org/css-validator/". This validation test returned no errors.
+Python Validation was done using the Python validator found at https://extendsclass.com/python-tester.html
+## CRUD Functionality
+I tested the CRUD functionality by adding, deleting, updating and deleting reviews on the site. These functions all test fine.
+## Search Bar
+I had to test the search bar to make sure that the value the user typed into it was being passed into the backend of the code. I did this through Python. I coded for a python function to get the argument that was being passed into the search by assigning it to a variable. I printed this variable to the console to make sure that it was the same vale as the value the user entered. This tested fine.
+I then had to make sure that the search result returned the correct match which I did by typing a search query which I knew the site had a review for into the search bar and submitting it to see if the review showed on the new page. 
+I also had to check that when there was no match for the search query, that the page shown was a page stating that there was no match with a prompt for this user to try another search. I did this by typing a game name which I knew the site didn't have a review for into the search bar and submitted the search to make sure I was redirected to the appropriate page.
+# Bugs
+I encountered a bug which appears when the user is looking at all the games and the top rated bugs. This bug correlates to the positioning of the game name and rating. I had coded for the button part of this list to take up 2 columns and the title and rating to take up 10 columns of this in a row. This code did not work as both these sections were taking up half of the row each. After troubleshooting this I came to the conclusion that this was occurring because I was using both the Materialize and Bootstrap CDN's and the code wasn't working properly because of that. I then commented out the bootstrap cdn code which changed the layout of the list but it did'nt seem to change it to the layout which I had hoped it would.
+# Deployment
+I have deployed this to Github and have been regularly adding and comitting changes to the projects local depository. I have used Gitpod entirely for coding and have been pushing any additions I make to the local depository onto Github as a precaution in case the changes didn't save in the project workspace so there are no differences between the deployed version and the development version.
+I have used Heroku to deploy this site on. The Heroku URL for this project is : https://ms3whatgame.herokuapp.com/
+To clone or download the code used to create the site, you can find it on github here:https://github.com/djjtyn/gamereview ,choose the option to either download or clone and follow the instructions onscreen. The project requires flask, flask_pymongo, dnspython and gunicorn to run so these will also need to be installed by the code editor in the terminal window.
+# Credits
+## Media 
+
+
 
 
 
