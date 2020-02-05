@@ -1,26 +1,25 @@
-This is a work in progress but the deployed version of the site so far (03/02/20) can be found on Heroku here: https://ms3whatgame.herokuapp.com/
-
 # Overview
-For my third milestone project I have chosen to create a videogame review website called WhatGame?.On this website people can view,add,edit and delete videogame reviews. People can also add gaming platforms which get logged to a database which can be used for reviews for future game reviews. There is a 'Top Rated' option in the navigation bar
-which, upon clicked, will show the user the ten top most rated games within the site's game reviews collection. This site has full
-CRUD functionality for game reviews.
+For my third milestone project I have chosen to create a videogame review website called WhatGame. On this website users can view, add, edit and delete videogame reviews. Users can also add gaming platforms which get logged to a database which can be used for game reviews. There is a 'Top Rated' option in the navigation bar which, upon clicked, 
+will show the user the ten top most rated games within the site's game reviews collection. This site has full CRUD
+functionality for game reviews. This project has been deployed to Heroku and can be found here: https://ms3whatgame.herokuapp.com/ 
 # Website URL
 # UX
 This website is designed for fans of videogames. It is designed to help videogame players choose their next videogame
 to play, or avoid, by showing game reviews left by other videogame players. If a videogame player has an opninion on a 
 particular game which they have played, they can choose to post a review of the videogame on the website. 
 ## User Stories
-As a user I have finished playing my most recent computer game and am interested in finding a new game to play. I can use this website to find suggestions for which games to play and which games to avoid to help me make my next choice of game to 
+As a user I have finished playing my most recent computer game and am interested in finding a new game to play. I can use 
+this website to find suggestions for which games to play and which games to avoid to help me make my next choice of game to 
 play.
 As a user I have just finished playing a computer game which I thought was very good. I want more people to be aware of how
-good the game is in a hope that more people might play it. I can choose to add a review on the site allowing me to give my 
+good the game is in a hope that more people might play it. I can choose to add a review on the site in which I can give my 
 opinions and rating on the game to encourage others to play the game.
 As a user I have just finished playing a computer game which I thought wasn't very enjoyable. I want more people to be aware
-of how bad an experience I had playing this particular videogame is. I can choose to add a review on the site allowing me to
-give my opinions and rating of the game to influence others to avoid the game.
-As a user I am leaving a review of a game which I played but I notice that the console which the game is available on isnt
-listed in the add review forms choices. I can choose to add the platform to the website so I can select it and allow others
-to select it if they are leaving a review of a game which is played using the same console.
+of how bad an experience I had playing this particular videogame. I can choose to add a review on the site I which I can
+give my opinions and rating of the game to help influence others to avoid the game.
+As a user I am leaving a review of a game which I played but I notice that the console which I played the game on isnt
+listed as an option in the add review form choices. I can choose to add the platform to the website so I can select it and 
+allow others to select it if they are leaving a review of a game which is played using the same console.
 As a user I dont have time to read a full review of the videogame I am interested in. I can choose to view a basic rating of
 the game on the home or the top rated page without needing to read the full review which will just show me the game name and rating without giving me additional details for the game.
 As a user, I only want to find out about the top ten rated games on the website. I can click the 'Top Rated' option in the
@@ -67,18 +66,18 @@ As a website owner, I want to find out about highly rated games which I am unawa
 ### Game Page
 ![image](static/img/wireframes/geme_page_mobile.png)
 
-For the background image for all the sites pages, I chose to an image which has a wide variety of different console controllers. I chose this image to emphasize that the site has the possiblity to host game reviews for a large variety of consoles.
-The forms on all the pages are coloured grey. I chose this colour scheme as I thought it would stand out well from the background image and allow a user to see a clear seperation between the form they are completing and the background image. The colours found within the form are all white. I chose this colour as I believe it allow the fields to stand out from the form.
-For some of the forms input options I chose to create dropdown menus from which the user would have to select a choice. I chose to do these dropdown menus in an attempt to make it easier for the user to choose a value. They also provide a framework which the user has to select a choice within to allow the site to run smoothly when interacting with the game review pages.
+For the background image for all the sites pages, I chose an image which has a wide variety of different console controllers. I chose this image to emphasize that the site has the possiblity to host game reviews for a large variety of consoles.
+The forms on all the pages are coloured grey. I chose this colour scheme as I thought it would stand out well from the background image and allow a user to see a clear seperation between the form they are completing and the background image. The colours found within the form are all white. I chose this colour as I believe it allows the fields to stand out from the form.
+For some of the forms input options I chose to create dropdown menus from which the user has to select a choice. I chose to do these dropdown menus in an attempt to make it easier for the user to choose a value. They also provide a framework which the user selects a choice within to allow the site to run smoothly when interacting with the game review pages.
 The last input area of the form allows a user to paste the URL of an image as a value which is then used as the image on the games review page.
 All of the form input areas have icons beside them which are there to add a bit more design to the form.
-Each games review page has it's own unique url using the id number given to it via mongo db. I chose to do it this way as I thought it would look better than having all the game reviews on the one page. 
-On the desktop version of a game review the games name is the main heading on the page. Below this is a screenshot of the game with some additional information such rating, publisher, release date, genre, platform, local multiplayer information on the game parralel to the image. Below the image and the additional information section is the overview of the game. I chose this layout because I thought it was the best way to lay out each bit of information the site has on the game after a review is left.
-For the mobile version of a game review the games name is the main heading on the page. Centred directly below this is a screenshot of the game. Tne additional information section of the game is below the image and the games overview is under the additional information section. I chose this layout because I thought it looked good for a mobile device.
-The game review has a background colour that is different to that of the background for the main page. I chose to add a black coloured background with a low opacity etting for this as I thought it looked good and created a clear area for the game reviews contents to sit inside.
+Each games review page has it's own unique url using the id number given to it in mongo db. I chose to do it this way as I thought it would look better than having all the game reviews on the one page. 
+On the desktop version of a game review the games name is the main heading on the page. Below this is a screenshot of the game with some additional information such as rating, publisher, release date, genre, platform and local multiplayer information on the game parralel to the image. Below the image and the additional information section is the overview of the game. I chose this layout because I thought it was the best way to lay out each bit of information the site has on the game after a review is left. The layout on tablets is the same as the desktop layout.
+For the mobile version of a game review the games name is the main heading on the page. Centred directly below this is a screenshot of the game. The additional information section of the game is below the image and the games overview is under the additional information section. I chose this layout because I thought it looked good for a mobile device.
+The game review,on all devices, has a background colour that is different to that of the background for the main page. I chose to add a black coloured background with a low opacity setting for this as I thought it looked good and created a clear area for the game reviews contents to sit inside.
 When a user leaves a review of a game, they are brought to a page showing a thank you message for leaving the review. There is a button on this page which ,when selected, leads the user back to the homepage where they can then see their review newly listed at the bottom of the game listings.
 When a user adds a new platform they are brought to a page showing a thank you message for adding the platform. There is a button on this page which when selected leads the user back to the sites home page. When the user goes to add a review they will see the platform that they added listed in the Platform dropdown section of the form.
-When a user edits a review they are brought to a page showing a thank you message for their edit. There is a button on this page which when clicked, leads the user back to the review page for the game they chose to edit the review for which they can then see their changes that they made to the review.
+When a user edits a review they are brought to a page showing a thank you message for their edit. There is a button on this page which when clicked, leads the user back to the review page for the game they chose to edit the review for at which they can then see their changes that they made to the review.
 # Features
 ## Existing Fetures
 ### Navigation Bar
@@ -113,6 +112,7 @@ A feature left to implement for this project is allowing users having to log in 
 * FontAwsome: I have made use of FontAwesome to attain some of the icons used for the project.
 * JQuery: I have made use of jQuery in this project. I have used this for the coding of the calender which is shown when the user selects the release date field from the add review form. I have also used it for the coding of the options available for the platform, multiplarer and rating options found within the add review form to ensure the options stay on screen onvce the user clicks on the drop down menu.
 JQuery is also used to simplify DOM manipulation.
+* Jinja: This project makes use of Jinja to allow the database values to be shown in the HTML code.
 * Python3: I have used Python a lot for this project.Python is used to redirect users to particular pages when forms are submitted or buttons are clicked making use of views and functions coded with Python. When a form is submitted, I have used Python to allow changes be made to a Mongodb database I have created for the site which contains details on reviews, platforms and ratings. I have linked this mongoDb database to the project using Python. 
 I have created local environment variables using python
 * Mongo DB. The databases which are used throughout the project are all stored on Mongo.DB
